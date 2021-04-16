@@ -1,0 +1,236 @@
+[
+  {
+    "nama": "Admin",
+    "unit": 0
+  },
+  {
+    "nama": "Bupati",
+    "unit": 1
+  },
+  {
+    "nama": "Wakil Bupati",
+    "unit": 2
+  },
+  {
+    "nama": "Sekretaris Daerah",
+    "unit": 11
+  },
+  {
+    "nama": "Operator Surat Sekretaris Daerah",
+    "unit": -11
+  },
+  {
+    "nama": "Asisten Pemerintahan",
+    "unit": 111
+  },
+  {
+    "nama": "Bagian Hukum dan Hak Asasi Manusia",
+    "unit": 1111
+  },
+  {
+    "nama": "Sub Bagian Peraturan Perundang-Undangan",
+    "unit": 11111
+  },
+  {
+    "nama": "Sub Bagian Bantuan Hukum dan Hak Asasi Manusia",
+    "unit": 11112
+  },
+  {
+    "nama": "Sub Bagian Dokumentasi Hukum",
+    "unit": 11113
+  },
+  {
+    "nama": "Bagian Organisasi",
+    "unit": 1112
+  },
+  {
+    "nama": "Sub Bagian Kelembagaan",
+    "unit": 11121
+  },
+  {
+    "nama": "Sub Bagian Ketata-laksanaan",
+    "unit": 11122
+  },
+  {
+    "nama": "Sub Bagian Kinerja dan Reformasi",
+    "unit": 11123
+  },
+  {
+    "nama": "Bagian Pemerintahan",
+    "unit": 1113
+  },
+  {
+    "nama": "Sub Bagian Pengembangan Kapasitas Daerah",
+    "unit": 11131
+  },
+  {
+    "nama": "Sub Bagian Kerjasama",
+    "unit": 11132
+  },
+  {
+    "nama": "Sub Bagian Bina Administrasi Kewilayahan",
+    "unit": 11133
+  },
+
+  {
+    "nama": "Asisten Pembangunan dan Kesejahteraan Rakyat",
+    "unit": 112
+  },
+  {
+    "nama": "Bagian Ekonomi, Pembangunan dan Kesejahteraan Rakyat",
+    "unit": 1121
+  }, {
+    "nama": "Sub Bagian Ekonomi",
+    "unit": 11211
+  }, {
+    "nama": "Sub Bagian Pembangunan",
+    "unit": 11212
+  }, {
+    "nama": "Sub Bagian Kesejahteraan Rakyat",
+    "unit": 11213
+  },
+  {
+    "nama": "Bagian Layanan Pengadaan",
+    "unit": 1122
+  }, {
+    "nama": "Sub Bagian Layanan Pengadaan Secara Elektronik (LPSE), Perencanaan, Evaluasi dan Monitoring Pengadaan",
+    "unit": 11221
+  }, {
+    "nama": "Sub Bagian Pengelola Pengadaan Barang/Jasa",
+    "unit": 11222
+  }, {
+    "nama": "Sub Bagian Pembinaan dan Advokasi Pengadaan Barang/Jasa",
+    "unit": 11223
+  },
+
+  {
+    "nama": "Asisten Administrasi Umum",
+    "unit": 113
+  },
+  {
+    "nama": "Bagian Umum",
+    "unit": 1131
+  }, {
+    "nama": "Sub Bagian Rumah Tangga",
+    "unit": 11311
+  }, {
+    "nama": "Sub Bagian Keuangan",
+    "unit": 11312
+  }, {
+    "nama": "Sub Bagian Tata Usaha dan Kepegawaian",
+    "unit": 11313
+  },
+  {
+    "nama": "Bagian Humas dan Protokol",
+    "unit": 1132
+  }, {
+    "nama": "Sub Bagian Protokol",
+    "unit": 11321
+  }, {
+    "nama": "Sub Bagian Dokumentasi dan Publikasi",
+    "unit": 11322
+  }, {
+    "nama": "Sub Bagian Informasi dan Pers",
+    "unit": 11323
+  },
+  {
+    "nama": "Bagian Perlengkapan",
+    "unit": 1133
+  }, {
+    "nama": "Sub Bagian Analisa Kebutuhan dan Pengadaan",
+    "unit": 11331
+  }, {
+    "nama": "Sub Bagian Pemanfaatan, Pemeliharaan, Penatausahaan",
+    "unit": 11332
+  }, {
+    "nama": "Sub Bagian Sarana dan Prasarana Penerangan",
+    "unit": 11333
+  },
+
+
+  {
+    "nama": "Badan Kesatuan Bangsa dan Politik",
+    "unit": 12
+  },
+  {
+    "nama": "Sekretariat DPRD",
+    "unit": 13
+  },
+  {
+    "nama": "Badan Perencanaan Pembangunan Daerah, Penelitian dan Pengembangan",
+    "unit": 14
+  },
+  {
+    "nama": "Badan Kepegawaian dan Pengembangan Sumber Daya Manusia",
+    "unit": 15
+  },
+  {
+    "nama": "Badan Pengelolaan Keuangan dan Aset Daerah",
+    "unit": 16
+  },
+  {
+    "nama": "Dinas Pekerjaan Umum dan Penataan Ruang, Perumahan dan Kawasan Permukiman",
+    "unit": 17
+  },
+  {
+    "nama": "Dinas Perhubungan, Kelautan dan Perikanan",
+    "unit": 18
+  },
+  {
+    "nama": "Dinas Lingkungan Hidup",
+    "unit": 19
+  },
+  {
+    "nama": "Dinas Kesehatan",
+    "unit": 20
+  },
+  {
+    "nama": "Dinas Kependudukan dan Pencatatan Sipil",
+    "unit": 21
+  },
+  {
+    "nama": "Dinas Komunikasi dan Informatika",
+    "unit": 22
+  },
+  {
+    "nama": "Dinas Pemberdayaan Perempuan dan Perlindungan Anak, Pengendalian Penduduk dan Keluarga Berencana",
+    "unit": 23
+  },
+  {
+    "nama": "Dinas Pendidikan, Kepemudaan dan Olahraga",
+    "unit": 24
+  },
+  {
+    "nama": "Dinas Pariwisata dan Kebudayaan",
+    "unit": 25
+  },
+  {
+    "nama": "Dinas Penanaman Modal, Pelayanan Terpadu Satu Pintu dan Tenaga Kerja",
+    "unit": 26
+  },
+  {
+    "nama": "Dinas Perpustakaan dan Kearsipan",
+    "unit": 27
+  },
+  {
+    "nama": "Dinas Pemberdayaan Masyarakat dan Desa",
+    "unit": 28
+  },
+  {
+    "nama": "Dinas Pertanian dan Pangan",
+    "unit": 29
+  },
+  {
+    "nama": "Dinas Koperasi, Usaha Kecil Menengah, Perindustrian dan Perdagangan",
+    "unit": 30
+  },
+  {
+    "nama": "Dinas Sosial",
+    "unit": 31
+  },
+  {
+    "nama": "Dinas Luar",
+    "unit": 99
+  }
+]
+

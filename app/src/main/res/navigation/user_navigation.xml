@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_navigation"
+    app:startDestination="@+id/nav_user_beranda">
+
+    <fragment
+        android:id="@+id/nav_user_beranda"
+        android:name="com.jembranakab.simas.ui.user.home.HomeUserFragment"
+        android:label="@string/beranda"
+        tools:layout="@layout/user_home" />
+
+    <fragment
+        android:id="@+id/nav_user_nomorsurat"
+        android:name="com.jembranakab.simas.ui.user.nomorsurat.NomorSuratUserFragment"
+        android:label="@string/nomor_surat"
+        tools:layout="@layout/user_nomorsurat" />
+
+    <fragment
+        android:id="@+id/nav_user_suratkeluar"
+        android:name="com.jembranakab.simas.ui.user.suratkeluar.SuratKeluarUserFragment"
+        android:label="@string/suratkeluar"
+        tools:layout="@layout/user_suratkeluar" />
+
+    <fragment
+        android:id="@+id/nav_user_suratmasuk"
+        android:name="com.jembranakab.simas.ui.user.suratmasuk.SuratMasukUserFragment"
+        android:label="@string/suratmasuk"
+        tools:layout="@layout/user_suratmasuk" />
+
+    <fragment
+        android:id="@+id/nav_user_disposisi"
+        android:name="com.jembranakab.simas.ui.user.suratmasuk.DisposisiUserFragment"
+        android:label="@string/disposisi"
+        tools:layout="@layout/user_disposisi" />
+
+    <fragment
+        android:id="@+id/nav_user_tambah_nomorsurat"
+        android:name="com.jembranakab.simas.ui.user.nomorsurat.TambahNomorSuratUserFragment"
+        android:label="@string/tmbh_no_surat"
+        tools:layout="@layout/user_tambah_nomorsurat" />
+
+</navigation>

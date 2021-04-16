@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_beranda"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/beranda" />
+        <item
+            android:id="@+id/nav_carisurat"
+            android:icon="@drawable/ic_baseline_search_24"
+            android:title="@string/cari_surat" />
+        <item
+            android:id="@+id/nav_arsip_suratkeluar"
+            android:icon="@drawable/ic_baseline_mail_outline_24"
+            android:title="@string/arsip_surat_keluar" />
+        <item
+            android:id="@+id/nav_arsip_suratmasuk"
+            android:icon="@drawable/ic_baseline_email_24"
+            android:title="@string/arsip_surat_masuk" />
+        <item tools:ignore="MenuTitle">
+            <menu>
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/ic_baseline_exit_to_app_24"
+                    android:title="@string/ganti_akun"
+                    android:checkable="false"
+                    android:checked="false"/>
+                <item
+                    android:id="@+id/nav_exit"
+                    android:icon="@drawable/ic_baseline_arrow_back_24"
+                    android:title="@string/keluar"
+                    android:checkable="false"
+                    android:checked="false"/>
+            </menu>
+        </item>
+    </group>
+</menu>

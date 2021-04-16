@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/isi_ringkas_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/isi_ringkas"
+            android:textStyle="bold"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="4dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/isi_ringkas_et"
+            android:enabled="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:maxLines="3"
+            android:layout_marginHorizontal="7dp"
+            android:layout_marginBottom="10dp"
+            android:paddingHorizontal="5dp"
+            android:gravity="top|start"
+            android:scrollbars="vertical"
+            android:background="@drawable/text_box_light"
+            tools:ignore="Autofill,LabelFor" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jawaban"
+            android:textStyle="bold"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="4dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/jawaban_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:maxLines="3"
+            android:layout_marginHorizontal="7dp"
+            android:layout_marginBottom="10dp"
+            android:paddingHorizontal="5dp"
+            android:gravity="top|start"
+            android:scrollbars="vertical"
+            android:background="@drawable/text_box_light"
+            tools:ignore="Autofill,LabelFor" />
+
+    </LinearLayout>
+
+</ScrollView>

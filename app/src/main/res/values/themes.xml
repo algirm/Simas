@@ -1,0 +1,41 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Simas" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/ambient4</item>
+        <item name="colorPrimaryVariant">@color/ambient</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/ambient</item>
+        <item name="colorSecondaryVariant">@color/ambient4</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:dropDownListViewStyle">@style/SpinnerStyle</item>
+    </style>
+
+    <style name="Theme.Simas.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Simas.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Simas.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="SplashTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_centered</item>
+    </style>
+
+    <style name="FloatingActionButton" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorSecondary">@color/ambient4</item>
+        <item name="colorOnSecondary">@color/white</item>
+    </style>
+
+    <style name="SpinnerStyle" parent="Widget.AppCompat.ListView.DropDown">
+        <item name="android:background">@color/background_item_surat</item>
+        <item name="android:divider">#d1d1d1</item>
+        <item name="android:dividerHeight">0.5dp</item>
+    </style>
+</resources>

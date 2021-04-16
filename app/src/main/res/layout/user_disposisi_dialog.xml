@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nomor_surat"
+            android:textStyle="bold"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="4dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:id="@+id/nomor_et"
+            android:layout_marginHorizontal="7dp"
+            android:layout_marginBottom="10dp"
+            android:padding="5dp"
+            android:enabled="false"
+            android:background="@drawable/text_box_light"
+            tools:ignore="Autofill,LabelFor" />
+
+        <TextView
+            android:id="@+id/isi_ringkas_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/isi_ringkas"
+            android:textStyle="bold"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="4dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/isi_ringkas_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:maxLines="3"
+            android:layout_marginHorizontal="7dp"
+            android:layout_marginBottom="10dp"
+            android:paddingHorizontal="5dp"
+            android:gravity="top|start"
+            android:scrollbars="vertical"
+            android:background="@drawable/text_box_light"
+            tools:ignore="Autofill,LabelFor" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kepada"
+            android:textStyle="bold"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="4dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/kepada_container"
+            android:layout_marginHorizontal="7dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/kepada_rcv"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/edit_disposisi_tv"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_disposisi"
+            android:textStyle="bold"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/instruksi"
+            android:textStyle="bold"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="4dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_box_light"
+            android:layout_marginHorizontal="7dp"
+            android:paddingVertical="5dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/instruksi_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tambahan_instruksi"
+            android:textStyle="bold"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="4dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/tambahan_instruksi_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:maxLines="3"
+            android:layout_marginHorizontal="7dp"
+            android:layout_marginBottom="10dp"
+            android:paddingHorizontal="5dp"
+            android:gravity="top|start"
+            android:scrollbars="vertical"
+            android:background="@drawable/text_box_light"
+            tools:ignore="Autofill,LabelFor" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

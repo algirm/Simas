@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/operator_navigation"
+    app:startDestination="@+id/nav_beranda">
+
+    <fragment
+        android:id="@+id/nav_beranda"
+        android:name="com.jembranakab.simas.ui.operator.home.HomeOperatorFragment"
+        android:label="@string/beranda"
+        tools:layout="@layout/operator_home" />
+
+    <fragment
+        android:id="@+id/nav_arsip_suratkeluar"
+        android:name="com.jembranakab.simas.ui.operator.suratkeluar.SuratKeluarOperatorFragment"
+        android:label="@string/arsip_surat_keluar"
+        tools:layout="@layout/operator_suratkeluar" />
+
+    <fragment
+        android:id="@+id/nav_arsip_suratmasuk"
+        android:name="com.jembranakab.simas.ui.operator.suratmasuk.SuratMasukOperatorFragment"
+        android:label="@string/arsip_surat_masuk"
+        tools:layout="@layout/operator_suratmasuk" />
+
+    <fragment
+        android:id="@+id/nav_tambaharsip_keluar"
+        android:name="com.jembranakab.simas.ui.operator.suratkeluar.TambahArsipKeluarFragment"
+        android:label="@string/tambah_arsip_keluar"
+        tools:layout="@layout/operator_tambah_keluar" />
+
+    <fragment
+        android:id="@+id/nav_tambaharsip_masuk"
+        android:name="com.jembranakab.simas.ui.operator.suratmasuk.TambahArsipMasukFragment"
+        android:label="@string/tambah_arsip_masuk"
+        tools:layout="@layout/operator_tambah_masuk" />
+
+</navigation>

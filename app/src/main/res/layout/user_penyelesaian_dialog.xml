@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:background="@color/background_item_surat"
+        android:layout_width="match_parent"
+        android:padding="7dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:background="@color/background_item_surat"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dari2"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:paddingEnd="6dp"
+                android:paddingStart="0dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dari"
+                android:textSize="16sp"
+                android:id="@+id/dari_detail_disposisi"
+                android:paddingHorizontal="3dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:background="@color/background_item_surat"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tgl2"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:paddingEnd="6dp"
+                android:paddingStart="0dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/waktu2"
+                android:textSize="16sp"
+                android:id="@+id/tanggal_tv"
+                android:paddingHorizontal="3dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:background="@color/background_item_surat"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nomor_surat"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:paddingEnd="6dp"
+                android:paddingStart="0dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no"
+                android:textSize="16sp"
+                android:id="@+id/nomor_surat_et"
+                android:paddingHorizontal="3dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:background="@color/background_item_surat"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/keterangan"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:paddingEnd="6dp"
+                android:paddingStart="0dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/keterangan"
+                android:textSize="16sp"
+                android:id="@+id/keterangan_tv"
+                android:paddingHorizontal="3dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/jawaban_disposisi"
+        android:textStyle="bold"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="4dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"/>
+
+    <EditText
+        android:id="@+id/jawaban_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:minLines="3"
+        android:maxLines="3"
+        android:layout_marginHorizontal="7dp"
+        android:layout_marginBottom="10dp"
+        android:paddingHorizontal="5dp"
+        android:gravity="top|start"
+        android:scrollbars="vertical"
+        android:background="@drawable/text_box_light"
+        tools:ignore="Autofill,LabelFor" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ktr_penyelesaian"
+        android:textStyle="bold"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="4dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"/>
+
+    <EditText
+        android:id="@+id/keterangan_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:minLines="3"
+        android:maxLines="3"
+        android:layout_marginHorizontal="7dp"
+        android:layout_marginBottom="10dp"
+        android:paddingHorizontal="5dp"
+        android:gravity="top|start"
+        android:scrollbars="vertical"
+        android:background="@drawable/text_box_light"
+        tools:ignore="Autofill,LabelFor" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tambahan"
+        android:textStyle="bold"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="4dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/unggah_file_pdf_maks_25_mb"
+        android:textStyle="bold"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="4dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="7dp"
+        android:paddingVertical="5dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_tampil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginHorizontal="7dp"
+            android:layout_marginBottom="7dp"
+            android:text="@string/tampil"
+            android:backgroundTint="@color/ambient4"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/button_pilihFile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginHorizontal="7dp"
+            android:layout_marginBottom="7dp"
+            android:text="@string/pilih_file"
+            android:backgroundTint="@color/ambient4"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/filename_tv"
+            android:textStyle="bold"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="4dp"
+            android:textSize="12sp"
+            android:visibility="visible"/>
+
+    </LinearLayout>
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:layout_gravity="center"
+        android:id="@+id/tambah_progress_bar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+</LinearLayout>

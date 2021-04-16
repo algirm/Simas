@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="6dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no"
+        android:id="@+id/nomor_detail"
+        android:layout_alignParentStart="true"
+        android:paddingEnd="6dp"
+        android:paddingStart="0dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/detail_penerima"
+        android:id="@+id/penerima_detail"
+        android:layout_toEndOf="@id/nomor_detail"
+        android:layout_toStartOf="@id/status_detail"
+        android:paddingHorizontal="3dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/status"
+        android:id="@+id/status_detail"
+        android:layout_alignParentEnd="true"
+        android:paddingHorizontal="6dp"/>
+
+
+</RelativeLayout>

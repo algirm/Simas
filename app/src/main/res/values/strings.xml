@@ -1,0 +1,211 @@
+<resources>
+    <string name="app_name">Simas</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="buat_akun">Buat Akun</string>
+    <string name="login">Login</string>
+    <string name="masuk">Masuk</string>
+    <string name="password">Password</string>
+    <string name="nip">Nomor Induk Kepegawaian</string>
+    <!--    <string name=""></string>-->
+    <string name="keluar">Keluar</string>
+    <string name="suratmasuk">Surat Masuk</string>
+    <string name="suratkeluar">Surat Keluar</string>
+    <string name="surat">Surat</string>
+    <string name="email">Email</string>
+    <string name="profile">Profile</string>
+    <string name="nip2">NIP</string>
+    <string name="disposisi">Disposisi</string>
+    <string name="koreksi">Koreksi</string>
+    <string name="cari_surat">Cari Surat</string>
+    <string name="app_name_panjang">Sistem Informasi Manajamen Surat</string>
+    <string name="jembranakab_panjang">Pemerintah Daerah Kabupaten Jembrana</string>
+    <string name="buat_surat">Buat Surat</string>
+    <string name="upload_file_surat">Upload File Surat</string>
+    <string name="kirim_ke">Kirim Ke</string>
+    <string name="nomor_surat">Nomor Surat</string>
+    <string name="perihal">Perihal</string>
+    <string name="sifat_surat">Sifat Surat</string>
+    <string name="biasa">Biasa</string>
+    <string name="penting">Penting</string>
+    <string name="rahasia">Rahasia</string>
+    <string name="kembali">Kembali</string>
+    <string name="kirim">Kirim</string>
+    <string name="kirim_surat">Kirim Surat</string>
+    <string name="buat_surat_baru">Buat Surat Baru</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="avatar">Avatar</string>
+    <string name="header">Header</string>
+    <string name="mailbox">Mailbox</string>
+    <string name="mailbox_masih_kosong">Mailbox Masih Kosong</string>
+    <string name="belum_ada_surat_masuk">Belum Ada Surat Masuk</string>
+    <string name="belum_ada_surat_keluar">Belum Ada Surat Keluar</string>
+    <string name="daftar_organisasi">Daftar Organisasi</string>
+    <string name="terjadi_kesalahan_tidak_dapat_memuat_data">Terjadi Kesalahan.. Tidak Dapat Memuat Data</string>
+    <string name="retry">Retry</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="edit_akun">Edit Akun</string>
+    <string name="password_lama">Password Lama</string>
+    <string name="password_baru">Password Baru</string>
+    <string name="konfirmasi_password_baru">Konfirmasi Password Baru</string>
+    <string name="update">Update</string>
+    <string name="ok">OK</string>
+    <string name="cancel_">Batal</string>
+    <string name="beranda">Beranda</string>
+    <string name="arsip_surat">Arsip Surat</string>
+    <string name="yakin_keluar">Anda Yakin Ingin Keluar?</string>
+    <string name="exit_dialog">Exit Dialog</string>
+    <string name="confirm_dialog">ConfirmDialogFragment</string>
+    <string name="log_out">Log Out</string>
+    <string name="dummy">Dummy</string>
+    <string name="iya">Ya</string>
+    <string name="batal">Batal</string>
+    <string name="ganti_akun">Ganti Akun</string>
+    <string name="keluar_aplikasi">Keluar Aplikasi</string>
+    <string name="pemkab">Pemerintah Kabupaten Jembrana</string>
+    <string name="test">test</string>
+    <string name="nomor">Nomor</string>
+    <string name="dari">Dari</string>
+    <string name="tgl_surat">Tgl. Surat</string>
+    <string name="no">No.</string>
+    <string name="tanggal_surat">Tanggal Surat</string>
+    <string name="divider">divider</string>
+    <string name="simpan">Simpan</string>
+    <string name="tujuan">Tujuan</string>
+    <string name="tambah_surat">Tambah Surat</string>
+    <string name="kategori">Kategori</string>
+    <string name="perincian">Perincian</string>
+    <string name="tambah_arsip_keluar">Tambah Arsip Surat Keluar</string>
+    <string name="kepada">Kepada</string>
+    <string name="no_surat">No. Surat</string>
+    <string name="dd_mm_yyyy">dd-mm-yyyy</string>
+    <string name="lampiran">Lampiran</string>
+    <string name="unggah_file_pdf_maks_25_mb">Unggah File (PDF maks. 25 MB)</string>
+    <string name="pilih_file">Pilih File</string>
+    <string name="tambah_arsip_masuk">Tambah Arsip Surat Masuk</string>
+    <string name="tujuan2">Tujuan:</string>
+    <string name="tampil">Tampil</string>
+    <string name="dari2">Dari:</string>
+    <string name="perihal2">Perihal:</string>
+    <string name="status2">Status:</string>
+    <string name="status">Status</string>
+    <string name="dropdown">Dropdown</string>
+    <string name="no_connection_text">Terjadi Kesalahan, Cek Koneksi Anda Dan Muat Ulang Aplikasi</string>
+    <string name="arsip_surat_keluar">Arsip Surat Keluar</string>
+    <string name="arsip_surat_masuk">Arsip Surat Masuk</string>
+    <string name="detail">Detail</string>
+    <string name="file">File</string>
+    <string name="diteruskan_kepada">Diteruskan Kepada</string>
+    <string name="pilih_semua">Pilih Semua</string>
+    <string name="detail_penerima">Detail Penerima</string>
+    <string name="tgl_surat2">Tgl. Surat</string>
+    <string name="tgl_surat3">Tgl. Surat:</string>
+    <string name="berhasil_tambah">Berhasil Tambah</string>
+    <string name="harus_diisi">Harus Diisi</string>
+    <string name="sesuaikan_format_tanggal">Sesuaikan Format Tanggal, contoh: 14–02–2021</string>
+    <string name="berhasil_dikirim">Berhasil Dikirim</string>
+    <string name="tembusan">Tembusan</string>
+    <string name="nama_dinas_luar">Nama Dinas Luar</string>
+    <string name="jawaban">Jawaban</string>
+    <string name="isi_ringkas">Isi Ringkas</string>
+    <string name="instruksi">Instruksi</string>
+    <string name="tambahan_instruksi">Tambahan Instruksi</string>
+    <string name="pilih_instruksi">Pilih Instruksi</string>
+    <string name="isi_semua_data">Isi Semua Data Yang Diperlukan</string>
+    <string name="draft_surat">Draft Surat</string>
+    <string name="draft_surat_keluar">Draft Surat Keluar</string>
+    <string name="penyelesaian">Penyelesaian</string>
+    <string name="asal_surat">Asal Surat</string>
+    <string name="asal_surat2">Asal Surat:</string>
+    <string name="oleh">Oleh:</string>
+    <string name="isi_ringkas2">Isi Ringkas:</string>
+    <string name="instruksi2">Instruksi:</string>
+    <string name="tambahan">Tambahan</string>
+    <string name="tambahan2">Tambahan:</string>
+    <string name="berhasil">Berhasil</string>
+    <string name="edit_disposisi">Edit Disposisi</string>
+    <string name="jawaban_disposisi">Jawaban Disposisi</string>
+    <string name="waktu2">Waktu:</string>
+    <string name="kepada2">Kepada:</string>
+    <string name="waktujawab2">Waktu Jawab:</string>
+    <string name="jawaban2">Jawaban:</string>
+    <string name="keterangan2">Keterangan:</string>
+    <string name="keterangan">Keterangan</string>
+    <string name="file_belum_upload">File Belum Diupload</string>
+    <string name="ktr_penyelesaian">Keterangan Penyelesaian</string>
+    <string name="tgl2">Tanggal:</string>
+    <string name="dispos_selesai">Disposisi Selesai</string>
+    <string name="tmbh_no_surat">Tambah Nomor Surat</string>
+    <string name="tujuan_surat">Tujuan Surat</string>
+    <string name="nama_instansi_luar">Nama Instansi Luar</string>
+    <string name="asal">Asal</string>
+    <string name="asal2">Asal:</string>
+    <string name="penandatangan2">Penandatangan:</string>
+    <string name="penandatangan">Penandatangan</string>
+    <string name="hapus">Hapus</string>
+    <string name="belum_ada_nomor_surat">Belum Ada Nomor Surat</string>
+    <string name="lupa_password_hubungi_administrator">Lupa Password ? Hubungi Administrator</string>
+    <string name="notifikasi">Notifikasi</string>
+    <string name="detail2">Detail:</string>
+    <string name="nomor_surat2">Nomor Surat:</string>
+    <string name="nomor2">Nomor:</string>
+    <string name="belum_ada_notifikasi">Belum Ada Notifikasi</string>
+
+    <string-array name="kategori_surat">
+        <item>Biasa</item>
+        <item>Segera</item>
+        <item>Rahasia</item>
+    </string-array>
+
+    <string-array name="perincian_surat">
+        <item>000.Umum</item>
+        <item>100.Pemerintahan</item>
+        <item>200.Politik</item>
+        <item>300.Keamanan Dan Ketertiban</item>
+        <item>400.Kesejahteraan</item>
+        <item>500.Perekonomian</item>
+        <item>600.Pekerjaan Umum Dan Ketenagakerjaan</item>
+        <item>700.Pengawasan</item>
+        <item>800.Kepegawaian</item>
+        <item>900.Keuangan</item>
+    </string-array>
+
+    <string-array name="instruksi">
+        <item>Mohon Arahan</item>
+        <item>Hadir</item>
+        <item>Tidak Hadir</item>
+        <item>Tindaklanjuti</item>
+        <item>Didiskusikan</item>
+        <item>Koordinasikan</item>
+        <item>Tugaskan Staf</item>
+        <item>Diterima</item>
+        <item>Hadiri</item>
+        <item>Jadwalkan</item>
+        <item>Setuju/ACC</item>
+        <item>Kaji/Saran</item>
+        <item>Siapkan Sambutan</item>
+        <item>Pedomani</item>
+        <item>File</item>
+        <item>Catat</item>
+        <item>Untuk Maklum</item>
+        <item>Wakili</item>
+        <item>Dibantu</item>
+        <item>Fasilitasi</item>
+        <item>Laksanakan</item>
+        <item>Terima Kasih</item>
+        <item>Tidak Bisa Dibantu</item>
+        <item>Dimonitor</item>
+    </string-array>
+</resources>
