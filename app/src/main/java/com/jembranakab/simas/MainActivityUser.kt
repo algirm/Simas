@@ -3,6 +3,7 @@ package com.jembranakab.simas
 import android.content.Intent
 import android.media.RingtoneManager
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.widget.Toast
 import androidx.activity.viewModels
@@ -27,6 +28,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
 import com.jembranakab.simas.base.BaseActivity
 import com.jembranakab.simas.model.Resource
+import com.jembranakab.simas.model.entities.DraftSurat
 import com.jembranakab.simas.model.entities.Notifikasi
 import com.jembranakab.simas.model.entities.SuratDisposisi
 import com.jembranakab.simas.model.factories.SuratOpdVMFactory
@@ -36,11 +38,15 @@ import com.jembranakab.simas.ui.general.dialog.ConfirmDialogFragment
 import com.jembranakab.simas.ui.general.dialog.ConfirmDialogListener
 import com.jembranakab.simas.utilities.App
 import com.jembranakab.simas.utilities.App.Companion.DISPOSISI
+import com.jembranakab.simas.utilities.App.Companion.DraftSurat.DIAJUKAN
+import com.jembranakab.simas.utilities.App.Companion.DraftSurat.KOREKSI
+import com.jembranakab.simas.utilities.App.Companion.DraftSurat.SETUJU
 import com.jembranakab.simas.utilities.App.Companion.EXIT
 import com.jembranakab.simas.utilities.App.Companion.JAWABAN
 import com.jembranakab.simas.utilities.App.Companion.LOGOUT
 import com.jembranakab.simas.utilities.App.Companion.NAVIGATE_UP
 import com.jembranakab.simas.utilities.App.Companion.PENYELESAIAN
+import com.jembranakab.simas.utilities.App.Companion.TAG
 import com.jembranakab.simas.utilities.DataConverter
 import kotlinx.android.synthetic.main.activity_main_user.*
 import kotlinx.android.synthetic.main.nav_header_main.view.*
@@ -150,11 +156,54 @@ class MainActivityUser : BaseActivity(), ConfirmDialogListener {
                             textNotif = "Surat Masuk baru diterima $keteranganNotif"
                             statusText = "Surat Masuk"
                         }
+                        App.Companion.DraftSurat.DIKOREKSI -> {
+                            notifikasi.keterangan?.let {
+                                keteranganNotif = "\nKeterangan Koreksi: $it"
+                            }
+                            textNotif = "Koreksi Pengajuan Surat Keluar $keteranganNotif"
+                            statusText = "Draft Surat Keluar"
+                        }
+                        App.Companion.DraftSurat.DISETUJUI_BIDANG -> {
+                            notifikasi.keterangan?.let {
+                                keteranganNotif = "\nKeterangan Penyetujuan: $it"
+                            }
+                            textNotif = "Pengajuan Surat telah disetujui dan dilanjutkan $keteranganNotif"
+                            statusText = "Draft Surat Keluar"
+                        }
+                        App.Companion.DraftSurat.DISETUJUI_DINAS -> {
+                            notifikasi.keterangan?.let {
+                                keteranganNotif = "\nKeterangan Penyetujuan: $it"
+                            }
+                            textNotif = "Pengajuan Surat telah disetujui dan segera ditandatangani $keteranganNotif"
+                            statusText = "Draft Surat Keluar"
+                        }
+                        DIAJUKAN -> {
+                            notifikasi.keterangan?.let {
+                                keteranganNotif = "\nKeterangan: $it"
+                            }
+                            textNotif = "Pengajuan Surat Keluar untuk penandatanganan $keteranganNotif"
+                            statusText = "Draft Surat Keluar"
+                        }
+                        App.Companion.DraftSurat.TELAH_DIKOREKSI -> {
+                            notifikasi.keterangan?.let {
+                                keteranganNotif = "\nKeterangan: $it"
+                            }
+                            textNotif = "Pengajuan Surat Keluar telah dikoreksi $keteranganNotif"
+                            statusText = "Draft Surat Keluar"
+                        }
+                        App.Companion.DraftSurat.DILANJUTKAN -> {
+                            notifikasi.keterangan?.let {
+                                keteranganNotif = "\nKeterangan: $it"
+                            }
+                            textNotif = "Pengajuan Surat Keluar untuk penandatanganan $keteranganNotif"
+                            statusText = "Draft Surat Keluar"
+                        }
                     }
 
                     if (notifikasi.receiveAt?.seconds!! > notificationTresholdTime?.seconds!!) {
-                        // refreshing data suratmasuk dan disposisi
+                        // refreshing data suratmasuk, suratkeluar dan disposisi
                         suratOpdVM.getSuratMasuk(thisUnit!!)
+                        suratOpdVM.getDraftSurat(thisUnit!!)
                         suratOpdVM.getSuratDisposisi(thisUnit!!)
 
                         // update local variable for notif stuff
@@ -202,6 +251,7 @@ class MainActivityUser : BaseActivity(), ConfirmDialogListener {
     private fun loadData() {
         with(suratOpdVM) {
             getNomorSurat(thisUnit!!)
+            getDraftSurat(thisUnit!!)
             getSuratKeluar(thisUnit!!)
             getSuratMasuk(thisUnit!!)
             getSuratDisposisi(thisUnit!!)
@@ -212,7 +262,7 @@ class MainActivityUser : BaseActivity(), ConfirmDialogListener {
                     }
                 }
             })
-            listSuratKeluar.observe(this@MainActivityUser, {
+            listDraftSurat.observe(this@MainActivityUser, {
                 if (it is Resource.Success) {
                     nav_view_user.menu.findItem(R.id.nav_user_suratkeluar).apply {
                         title = "Surat Keluar (${it.data.size})"
@@ -387,6 +437,66 @@ class MainActivityUser : BaseActivity(), ConfirmDialogListener {
         })
     }
 
+    private fun draftSurat(bundle: Bundle) {
+        suratOpdVM.draftSurat(
+            bundle.getSerializable("draftSurat") as DraftSurat,
+            bundle.getInt("tipeAjukan")
+        )
+        suratOpdVM.resultDraftSurat.observe(this, {
+            if (it !is Resource.Loading) {
+                suratOpdVM.resultPenyelesaian.removeObservers(this)
+            }
+            if (it is Resource.Success) {
+                suratOpdVM.getNomorSurat(thisUnit!!)
+                suratOpdVM.getDraftSurat(thisUnit!!)
+                snackLong(getString(R.string.draft_berhasil_diajukan))
+            }
+            if (it is Resource.Failure) {
+                toastError(it.throwable)
+                Log.e(TAG, "draftSurat: Error Occured ${it.throwable?.message}", it.throwable)
+            }
+        })
+    }
+
+    private fun koreksiDraftSurat(bundle: Bundle) {
+        suratOpdVM.koreksiDraftSurat(
+            bundle.getSerializable("draftSurat") as DraftSurat
+        )
+        suratOpdVM.resultKoreksiDraftSurat.observe(this, {
+            if (it !is Resource.Loading) {
+                suratOpdVM.resultKoreksiDraftSurat.removeObservers(this)
+            }
+            if (it is Resource.Success) {
+                suratOpdVM.getDraftSurat(thisUnit!!)
+                snackLong("Berhasil Koreksi")
+            }
+            if (it is Resource.Failure) {
+                toastError(it.throwable)
+                Log.e(TAG, "koreksiDraftSurat: Error Occured ${it.throwable?.message}", it.throwable)
+            }
+        })
+    }
+
+    private fun setujuDraftSurat(bundle: Bundle) {
+        suratOpdVM.setujuDraftSurat(
+            bundle.getSerializable("draftSurat") as DraftSurat,
+            thisUnit!!
+        )
+        suratOpdVM.resultSetujuDraftSurat.observe(this, {
+            if (it !is Resource.Loading) {
+                suratOpdVM.resultSetujuDraftSurat.removeObservers(this)
+            }
+            if (it is Resource.Success) {
+                suratOpdVM.getDraftSurat(thisUnit!!)
+                snackLong("Telah disetujui")
+            }
+            if (it is Resource.Failure) {
+                toastError(it.throwable)
+                Log.e(TAG, "setujuDraftSurat: Error Occured ${it.throwable?.message}", it.throwable)
+            }
+        })
+    }
+
     private fun showConfirmDialog(title: String, event: Int) {
         val args = Bundle()
         args.putString("header", title)
@@ -403,6 +513,9 @@ class MainActivityUser : BaseActivity(), ConfirmDialogListener {
             DISPOSISI -> disposisi(bundle!!)
             JAWABAN -> jawabDisposisi(bundle!!)
             PENYELESAIAN -> penyelesaianDisposisi(bundle!!)
+            DIAJUKAN -> draftSurat(bundle!!)
+            KOREKSI -> koreksiDraftSurat(bundle!!)
+            SETUJU -> setujuDraftSurat(bundle!!)
             else -> {
                 toastError(null)
                 dialog.dismiss()

@@ -11,9 +11,11 @@ import androidx.recyclerview.widget.SimpleItemAnimator
 import com.jembranakab.simas.R
 import com.jembranakab.simas.base.BaseFragment
 import com.jembranakab.simas.model.Resource
-import com.jembranakab.simas.model.entities.Surat
+import com.jembranakab.simas.model.entities.DraftSurat
 import com.jembranakab.simas.model.viewmodel.SuratOpdViewModel
 import com.jembranakab.simas.ui.user.nomorsurat.adapter.NomorSuratAdapter
+import com.jembranakab.simas.ui.user.suratkeluar.DraftSuratDialogFragment
+import com.jembranakab.simas.utilities.App.Companion.DraftSurat.DIAJUKAN
 import kotlinx.android.synthetic.main.user_nomorsurat.*
 
 
@@ -24,8 +26,9 @@ class NomorSuratUserFragment : BaseFragment() {
 
     private lateinit var mAdapter: NomorSuratAdapter
     private lateinit var linearLayoutManager: LinearLayoutManager
+    private lateinit var draftSuratDialogFragment: DraftSuratDialogFragment
 
-    private var dataList = mutableListOf<Surat>()
+    private var dataList = mutableListOf<DraftSurat>()
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -75,8 +78,16 @@ class NomorSuratUserFragment : BaseFragment() {
         (suratpager_rcv.itemAnimator as SimpleItemAnimator).supportsChangeAnimations = false
         mAdapter = NomorSuratAdapter(dataList, object : NomorSuratAdapter.ButtonAdapterListener {
 
-            override fun hapusOnClick(v: View?, surat: Surat) {
+            override fun hapusOnClick(v: View?, surat: DraftSurat) {
 
+            }
+
+            override fun draftOnClick(v: View?, draftsurat: DraftSurat) {
+                val args = Bundle()
+                args.putSerializable("draftSurat", draftsurat)
+                args.putInt("tipeAjukan", DIAJUKAN)
+                draftSuratDialogFragment.arguments = args
+                draftSuratDialogFragment.show(childFragmentManager, "draftSuratDialog")
             }
 
         }, requireContext())
@@ -91,6 +102,7 @@ class NomorSuratUserFragment : BaseFragment() {
         thisUnit =
                 findNavController().currentDestination!!.arguments["thisUnit"]?.defaultValue as Int
         tambah_fab.setOnClickListener { findNavController().navigate(R.id.nav_user_tambah_nomorsurat) }
+        draftSuratDialogFragment = DraftSuratDialogFragment.newInstance()
     }
 
     override fun onDestroyView() {

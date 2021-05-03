@@ -128,7 +128,6 @@ class MainActivityOp : BaseActivity(), ConfirmDialogListener {
 
     private fun setDrawerHeader() {
         val headerView = nav_view_op.getHeaderView(0)
-        headerView.jembranakab_tv.text = thisUnit.toString()
         headerView.namaOrg.text = thisOrg
     }
 

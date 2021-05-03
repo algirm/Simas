@@ -13,10 +13,13 @@ import com.jembranakab.simas.R
 import com.jembranakab.simas.base.BaseFragment
 import com.jembranakab.simas.model.JsonOrg
 import com.jembranakab.simas.model.Resource
+import com.jembranakab.simas.model.entities.DraftSurat
 import com.jembranakab.simas.model.entities.Organisasi
 import com.jembranakab.simas.model.entities.Surat
 import com.jembranakab.simas.model.viewmodel.SuratOpdViewModel
 import com.jembranakab.simas.ui.operator.suratkeluar.adapter.KepadaAdapter
+import com.jembranakab.simas.utilities.App
+import com.jembranakab.simas.utilities.App.Companion.DraftSurat.BELUM_PROSES
 import com.jembranakab.simas.utilities.DataConverter
 import kotlinx.android.synthetic.main.user_tambah_nomorsurat.*
 
@@ -68,7 +71,15 @@ class TambahNomorSuratUserFragment : BaseFragment(), AdapterView.OnItemSelectedL
                     ""
                 }
 
-        suratOpdVM.tambahNomorSurat(surat)
+        val draftSurat = DraftSurat(
+            asalDraft = thisUnit,
+            surat = surat,
+            pengirim = thisUnit,
+            lastModified = Timestamp.now(),
+            status = BELUM_PROSES
+        )
+
+        suratOpdVM.tambahNomorSurat(draftSurat)
         suratOpdVM.resultTambahNomor.observe(viewLifecycleOwner, {
             when (it) {
                 is Resource.Loading -> tambah_progress_bar.show()

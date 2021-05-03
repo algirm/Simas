@@ -11,6 +11,15 @@ class DataConverter {
         private val orgTopLayer = JsonOrg.getAllTopLayer()
         private val orgAll = JsonOrg.getAllOrg()
 
+        fun getAtasanUnitExceptTopUnit(thisUnit: Int): Int {
+            var atasan = ""
+            val thisUnitCharArray = thisUnit.toString().toCharArray()
+            for (i in 0 until thisUnitCharArray.size - 1) {
+                atasan += thisUnitCharArray[i]
+            }
+            return atasan.toInt()
+        }
+
         fun getKategori(kategori: Int): String {
             return when (kategori) {
                 0 -> "Biasa"

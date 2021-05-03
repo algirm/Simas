@@ -13,6 +13,10 @@ interface SuratOpdRepo {
     suspend fun jawabDisposisi(thisUnit: Int, suratDisposisi: SuratDisposisi, jawaban: String): Resource<String>
     suspend fun penyelesaianDisposisi(thisUnit: Int, suratDisposisi: SuratDisposisi): Resource<String>
     suspend fun detailDisposisi(suratDisposisi: SuratDisposisi): Resource<Map<String, Any>>
-    suspend fun tambahNomorSurat(surat: Surat): Resource<String>
-    suspend fun getNomorSurat(thisUnit: Int): Resource<MutableList<Surat>>
+    suspend fun getNomorSurat(thisUnit: Int): Resource<MutableList<DraftSurat>>
+    suspend fun tambahNomorSurat(draftSurat: DraftSurat): Resource<String>
+    suspend fun koreksiDraftSurat(draftSurat: DraftSurat): Resource<String>
+    suspend fun draftSurat(draftSurat: DraftSurat, tipe: Int): Resource<String>
+    suspend fun setujuDraftSurat(draftSurat: DraftSurat, thisUnit: Int): Resource<String>
+    suspend fun getDraftSurat(thisUnit: Int): Resource<List<DraftSurat>>
 }

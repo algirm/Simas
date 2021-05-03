@@ -27,11 +27,22 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentTop="true">
 
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
                 <ImageView
                     android:paddingBottom="7dp"
                     android:id="@+id/drop_arrow"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
+                    android:layout_toEndOf="@id/status"
                     android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
                     android:contentDescription="@string/dropdown" />
 
@@ -125,6 +136,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_toStartOf="@id/button_container"
+                android:layout_alignBottom="@id/button_container"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -156,35 +168,8 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/container_asalsurat"
-                    android:layout_below="@id/container_text_bawah"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:text="@string/asal2"
-                        android:textColor="@color/black"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:id="@+id/asalsurat_tv"
-                        android:layout_marginStart="5dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:textColor="@color/black"
-                        android:text="@string/asal"
-                        android:textSize="12sp" />
-
-                </LinearLayout>
-
-                <LinearLayout
                     android:id="@+id/container_tgl"
-                    android:layout_below="@id/container_asalsurat"
+                    android:layout_below="@id/container_text_bawah"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
@@ -213,7 +198,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/container_penandatangan"
+                    android:id="@+id/container_keterangan"
                     android:layout_below="@id/container_tgl"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -224,19 +209,48 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="5dp"
-                        android:text="@string/penandatangan2"
+                        android:text="@string/keterangan2"
                         android:textColor="@color/black"
                         android:textSize="12sp" />
 
                     <TextView
                         android:layout_marginStart="4dp"
-                        android:id="@+id/penandatangan_tv"
+                        android:id="@+id/tvKeterangan"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="5dp"
-                        android:text="@string/penandatangan"
+                        android:text="@string/keterangan"
                         android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="28dp">
+
+                    <TextView
+                        android:id="@+id/text_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/status2"
+                        android:textStyle="italic"
+                        android:paddingHorizontal="4dp"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/status_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:paddingHorizontal="4dp"
+                        android:text="@string/status"
+                        android:textStyle="italic"
                         android:textSize="12sp" />
 
                 </LinearLayout>
@@ -253,20 +267,35 @@
                 android:layout_margin="5dp">
 
                 <Button
-                    android:id="@+id/button_hapus"
+                    android:id="@+id/btTampil"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="12sp"
-                    android:text="@string/hapus"/>
+                    android:text="@string/tampil"/>
+
+                <Button
+                    android:id="@+id/btKoreksi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="@string/koreksi"/>
+
+                <Button
+                    android:id="@+id/btSetuju"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="@string/setuju"/>
 
                 <Button
                     android:id="@+id/btDraft"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="12sp"
-                    android:text="@string/draft"/>
+                    android:text="@string/draft" />
 
             </LinearLayout>
+
 
         </RelativeLayout>
 

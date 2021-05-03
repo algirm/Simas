@@ -13,6 +13,12 @@ import com.google.firebase.Timestamp
 import com.jembranakab.simas.R
 import com.jembranakab.simas.model.entities.Notifikasi
 import com.jembranakab.simas.utilities.App.Companion.DISPOSISI
+import com.jembranakab.simas.utilities.App.Companion.DraftSurat.DIAJUKAN
+import com.jembranakab.simas.utilities.App.Companion.DraftSurat.DIKOREKSI
+import com.jembranakab.simas.utilities.App.Companion.DraftSurat.DILANJUTKAN
+import com.jembranakab.simas.utilities.App.Companion.DraftSurat.DISETUJUI_BIDANG
+import com.jembranakab.simas.utilities.App.Companion.DraftSurat.DISETUJUI_DINAS
+import com.jembranakab.simas.utilities.App.Companion.DraftSurat.TELAH_DIKOREKSI
 import com.jembranakab.simas.utilities.App.Companion.JAWABAN
 import com.jembranakab.simas.utilities.App.Companion.PENYELESAIAN
 import com.jembranakab.simas.utilities.App.Companion.SURAT_MASUK
@@ -66,6 +72,48 @@ class NotifikasiAdapter(
                         }
                         textNotif = "Surat Masuk baru diterima $keteranganNotif"
                         statusText = "Surat Masuk"
+                    }
+                    DIKOREKSI -> {
+                        item.keterangan?.let {
+                            keteranganNotif = "\nKeterangan Koreksi: $it"
+                        }
+                        textNotif = "Koreksi Pengajuan Surat Keluar $keteranganNotif"
+                        statusText = "Draft Surat Keluar"
+                    }
+                    DISETUJUI_BIDANG -> {
+                        item.keterangan?.let {
+                            keteranganNotif = "\nKeterangan Penyetujuan: $it"
+                        }
+                        textNotif = "Pengajuan Surat telah disetujui dan dilanjutkan $keteranganNotif"
+                        statusText = "Draft Surat Keluar"
+                    }
+                    DISETUJUI_DINAS -> {
+                        item.keterangan?.let {
+                            keteranganNotif = "\nKeterangan Penyetujuan: $it"
+                        }
+                        textNotif = "Pengajuan Surat telah disetujui dan segera ditandatangani $keteranganNotif"
+                        statusText = "Draft Surat Keluar"
+                    }
+                    DIAJUKAN -> {
+                        item.keterangan?.let {
+                            keteranganNotif = "\nKeterangan: $it"
+                        }
+                        textNotif = "Pengajuan Surat Keluar untuk penandatanganan $keteranganNotif"
+                        statusText = "Draft Surat Keluar"
+                    }
+                    TELAH_DIKOREKSI -> {
+                        item.keterangan?.let {
+                            keteranganNotif = "\nKeterangan: $it"
+                        }
+                        textNotif = "Pengajuan Surat Keluar telah dikoreksi $keteranganNotif"
+                        statusText = "Draft Surat Keluar"
+                    }
+                    DILANJUTKAN -> {
+                        item.keterangan?.let {
+                            keteranganNotif = "\nKeterangan: $it"
+                        }
+                        textNotif = "Pengajuan Surat Keluar untuk penandatanganan $keteranganNotif"
+                        statusText = "Draft Surat Keluar"
                     }
                 }
 

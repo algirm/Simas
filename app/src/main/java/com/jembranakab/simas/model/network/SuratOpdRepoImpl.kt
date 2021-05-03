@@ -9,6 +9,15 @@ import com.jembranakab.simas.model.Resource
 import com.jembranakab.simas.model.entities.*
 import com.jembranakab.simas.model.network.base.SuratOpdRepo
 import com.jembranakab.simas.utilities.App.Companion.DISPOSISI
+import com.jembranakab.simas.utilities.App.Companion.DraftSurat.DIAJUKAN
+import com.jembranakab.simas.utilities.App.Companion.DraftSurat.DIAJUKAN_KEMBALI
+import com.jembranakab.simas.utilities.App.Companion.DraftSurat.DIKOREKSI
+import com.jembranakab.simas.utilities.App.Companion.DraftSurat.DILANJUTKAN
+import com.jembranakab.simas.utilities.App.Companion.DraftSurat.DISETUJUI_BIDANG
+import com.jembranakab.simas.utilities.App.Companion.DraftSurat.DISETUJUI_DINAS
+import com.jembranakab.simas.utilities.App.Companion.DraftSurat.KOREKSI
+import com.jembranakab.simas.utilities.App.Companion.DraftSurat.SETUJU
+import com.jembranakab.simas.utilities.App.Companion.DraftSurat.TELAH_DIKOREKSI
 import com.jembranakab.simas.utilities.App.Companion.JAWABAN
 import com.jembranakab.simas.utilities.App.Companion.PENYELESAIAN
 import com.jembranakab.simas.utilities.DataConverter
@@ -21,6 +30,7 @@ import kotlin.collections.HashMap
 
 class SuratOpdRepoImpl : SuratOpdRepo {
     private val suratRef = FirebaseFirestore.getInstance().collection("surat")
+    private val draftSuratRef = FirebaseFirestore.getInstance().collection("draftSurat")
     private val suratOpdRef = FirebaseFirestore.getInstance().collection("suratopd")
     private val disposisiRef = FirebaseFirestore.getInstance().collection("disposisi")
     private val jawabanRef = FirebaseFirestore.getInstance().collection("jawaban")
@@ -444,33 +454,289 @@ class SuratOpdRepoImpl : SuratOpdRepo {
         taskNotif.update("id", taskNotif.id).await()
     }
 
-    override suspend fun tambahNomorSurat(surat: Surat): Resource<String> = withContext(Dispatchers.IO) {
+    override suspend fun tambahNomorSurat(draftSurat: DraftSurat): Resource<String> = withContext(Dispatchers.IO) {
+        val opdId = DataConverter.getOpdId(draftSurat.pengirim!!)
+
         if (isOffline()) throw Exception("No Internet Connection")
 
-        val taskTambah = suratRef
-                .add(surat)
-                .await()
+        val taskSurat = suratRef
+            .add(draftSurat.surat!!)
+            .await()
+        taskSurat
+            .update("id", taskSurat.id)
+            .await()
+
+        draftSurat.surat?.id = taskSurat.id
+
+        val taskTambah = draftSuratRef
+            .document(opdId)
+            .collection(draftSurat.pengirim.toString())
+            .add(draftSurat)
+            .await()
         taskTambah
-                .update("id", taskTambah.id)
-                .await()
+            .update("id", taskTambah.id)
+            .await()
 
         return@withContext Resource.Success("")
     }
 
-    override suspend fun getNomorSurat(thisUnit: Int): Resource<MutableList<Surat>> {
-        val resultList = arrayListOf<Surat>()
+    override suspend fun getNomorSurat(thisUnit: Int): Resource<MutableList<DraftSurat>> {
+        val opdId = DataConverter.getOpdId(thisUnit)
+        val resultList = arrayListOf<DraftSurat>()
 
-        val task = suratRef
-                .whereEqualTo("createBy", thisUnit)
-                .orderBy("createdAt", Query.Direction.DESCENDING)
-                .get()
-                .await()
+        val task = draftSuratRef
+            .document(opdId)
+            .collection(thisUnit.toString())
+            .whereEqualTo("status", 0)
+            .get()
+            .await()
 
         for (data in task) {
-            resultList.add(data.toObject(Surat::class.java))
+            resultList.add(data.toObject(DraftSurat::class.java))
         }
 
         return Resource.Success(resultList)
+    }
+
+    override suspend fun draftSurat(draftSurat: DraftSurat, tipe: Int): Resource<String> = withContext(Dispatchers.IO) {
+        val opdId = DataConverter.getOpdId(draftSurat.pengirim!!)
+
+        if (isOffline()) throw Exception("No Internet Connection")
+
+        draftSurat.lastModified = Timestamp.now()
+        // write to pengirim
+        draftSuratRef.document(opdId)
+            .collection(draftSurat.pengirim.toString())
+            .document(draftSurat.id!!)
+            .set(draftSurat)
+            .await()
+
+        // write to penerima
+        var tipeNotif = -1
+        when (tipe) {
+            DIAJUKAN -> {
+                draftSurat.status = DIAJUKAN
+                tipeNotif = DIAJUKAN
+            }
+            DIAJUKAN_KEMBALI -> {
+                draftSurat.status = TELAH_DIKOREKSI
+                tipeNotif = TELAH_DIKOREKSI
+            }
+        }
+        draftSuratRef.document(opdId)
+            .collection(draftSurat.penerima.toString())
+            .document(draftSurat.id!!)
+            .set(draftSurat)
+            .await()
+
+        // kirim notifikasi ke penerima
+        val notifikasi = Notifikasi(
+            null,
+            fromUnit = draftSurat.pengirim,
+            surat = draftSurat.surat,
+            tipe = tipeNotif,
+            receiveAt = Timestamp.now(),
+            keterangan = draftSurat.keterangan
+        )
+        kirimNotifikasi(notifikasi, draftSurat.penerima.toString())
+
+        return@withContext Resource.Success("")
+    }
+
+    override suspend fun koreksiDraftSurat(draftSurat: DraftSurat): Resource<String> = withContext(Dispatchers.IO) {
+        val opdId = DataConverter.getOpdId(draftSurat.pengirim!!)
+
+        if (isOffline()) throw Exception("No Internet Connection")
+
+        draftSurat.lastModified = Timestamp.now()
+        val draftSurat2 = draftSurat.copy()
+
+        draftSurat.status = DIKOREKSI
+
+        if (draftSurat.pengirim != draftSurat.asalDraft) {
+            val asalDraftCharArray = draftSurat.asalDraft.toString().toCharArray()
+            val penerimaCharArray = draftSurat.penerima.toString()
+                .toCharArray()
+            for (i in 0 until asalDraftCharArray.size - penerimaCharArray.size) {
+                var bawahan = ""
+                for (j in 0 until asalDraftCharArray.size - i) {
+                    bawahan += asalDraftCharArray[j]
+                }
+
+                // update ke bawahan
+                val map = HashMap<String, Any?>()
+                map["status"] = DIKOREKSI
+                map["keterangan"] = draftSurat.keterangan
+                draftSuratRef.document(opdId)
+                    .collection(bawahan)
+                    .document(draftSurat.id!!)
+                    .update(map)
+                    .await()
+                val notifikasi = Notifikasi(
+                    fromUnit = draftSurat.penerima,
+                    surat = draftSurat.surat,
+                    tipe = DIKOREKSI,
+                    receiveAt = Timestamp.now(),
+                    keterangan = draftSurat.keterangan
+                )
+                kirimNotifikasi(notifikasi, bawahan)
+            }
+
+        } else {
+            draftSuratRef.document(opdId)
+                .collection(draftSurat.pengirim.toString())
+                .document(draftSurat.id!!)
+                .set(draftSurat)
+                .await()
+            val notifikasi = Notifikasi(
+                fromUnit = draftSurat.penerima,
+                surat = draftSurat.surat,
+                tipe = DIKOREKSI,
+                receiveAt = Timestamp.now(),
+                keterangan = draftSurat.keterangan
+            )
+            kirimNotifikasi(notifikasi, draftSurat.pengirim.toString())
+        }
+
+        /*// update ke bawahan
+        draftSuratRef.document(opdId)
+            .collection(draftSurat.pengirim.toString())
+            .document(draftSurat.id!!)
+            .set(draftSurat)
+        val notifikasi = Notifikasi(
+            fromUnit = draftSurat.penerima,
+            surat = draftSurat.surat,
+            tipe = DIKOREKSI,
+            receiveAt = Timestamp.now(),
+            keterangan = draftSurat.keterangan
+        )
+        kirimNotifikasi(notifikasi, draftSurat.pengirim.toString())*/
+
+        // update ke pengoreksi
+        draftSurat2.status = KOREKSI
+        draftSuratRef.document(opdId)
+            .collection(draftSurat2.penerima.toString())
+            .document(draftSurat2.id!!)
+            .set(draftSurat2)
+            .await()
+
+        return@withContext Resource.Success("")
+    }
+
+    override suspend fun setujuDraftSurat(draftSurat: DraftSurat, thisUnit: Int): Resource<String> = withContext(Dispatchers.IO) {
+        val opdId = DataConverter.getOpdId(draftSurat.pengirim!!)
+
+        if (isOffline()) throw Exception("No Internet Connection")
+
+        draftSurat.lastModified = Timestamp.now()
+        // jika disetujui oleh unit teratas
+        if (draftSurat.penerima.toString().toCharArray().size < 3) {
+            // update status thisUnit (top)
+            draftSurat.status = SETUJU
+            draftSuratRef.document(opdId)
+                .collection(thisUnit.toString())
+                .document(draftSurat.id!!)
+                .set(draftSurat)
+                .await()
+
+            // update sampai terbawah
+            draftSurat.status = DISETUJUI_DINAS
+            val asalDraft = draftSurat.asalDraft.toString().toCharArray()
+            for (i in 0 until asalDraft.size-2) {
+                var bawahan = ""
+                for (j in 0 until asalDraft.size - i) {
+                    bawahan += asalDraft[j].toString()
+                }
+                val map = HashMap<String, Any?>()
+                map["status"] = DISETUJUI_DINAS
+                map["keterangan"] = draftSurat.keterangan
+                draftSuratRef.document(opdId)
+                    .collection(bawahan)
+                    .document(draftSurat.id!!)
+                    .update(map)
+                    .await()
+                val notifikasi = Notifikasi(
+                    fromUnit = thisUnit,
+                    surat = draftSurat.surat,
+                    tipe = DISETUJUI_DINAS,
+                    receiveAt = Timestamp.now(),
+                    keterangan = draftSurat.keterangan
+                )
+                kirimNotifikasi(notifikasi, bawahan)
+            }
+        } else {
+            // update status thisUnit
+            draftSurat.status = DILANJUTKAN
+            draftSuratRef.document(opdId)
+                .collection(thisUnit.toString())
+                .document(draftSurat.id!!)
+                .set(draftSurat)
+                .await()
+
+            // update status ke bawahan
+            draftSurat.status = DISETUJUI_BIDANG
+            val map = HashMap<String, Any?>()
+            map["status"] = DISETUJUI_BIDANG
+            map["keterangan"] = draftSurat.keterangan
+            draftSuratRef.document(opdId)
+                .collection(draftSurat.asalDraft.toString())
+                .document(draftSurat.id!!)
+                .update(map)
+                .await()
+            val notifikasi = Notifikasi(
+                fromUnit = thisUnit,
+                surat = draftSurat.surat,
+                tipe = DISETUJUI_BIDANG,
+                receiveAt = Timestamp.now(),
+                keterangan = draftSurat.keterangan
+            )
+            kirimNotifikasi(notifikasi, draftSurat.asalDraft.toString())
+
+            var atasan = ""
+            val thisUnitCharArray = thisUnit.toString().toCharArray()
+            for (i in 0 until thisUnitCharArray.size - 1) {
+                atasan += thisUnitCharArray[i]
+            }
+
+            val draftSurat2 = draftSurat.copy(
+                pengirim = thisUnit,
+                penerima = atasan.toInt(),
+                keterangan = draftSurat.keterangan,
+                status = DIAJUKAN
+            )
+            // kirim ke atasan selanjutnya
+            draftSuratRef.document(opdId)
+                .collection(atasan)
+                .document(draftSurat2.id!!)
+                .set(draftSurat2)
+                .await()
+            val notifikasi2 = Notifikasi(
+                fromUnit = draftSurat2.pengirim,
+                surat = draftSurat2.surat,
+                tipe = DILANJUTKAN,
+                receiveAt = Timestamp.now()
+            )
+            kirimNotifikasi(notifikasi2, draftSurat2.penerima.toString())
+        }
+
+        return@withContext Resource.Success("")
+    }
+
+    override suspend fun getDraftSurat(thisUnit: Int): Resource<List<DraftSurat>> {
+        val result = arrayListOf<DraftSurat>()
+        val opdId = DataConverter.getOpdId(thisUnit)
+
+        val task = draftSuratRef.document(opdId)
+            .collection(thisUnit.toString())
+            .orderBy("lastModified", Query.Direction.DESCENDING)
+            .get()
+            .await()
+
+        for (dt in task) {
+            result.add(dt.toObject(DraftSurat::class.java))
+        }
+
+        return Resource.Success(result)
     }
 
     private suspend fun isOffline(): Boolean {

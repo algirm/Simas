@@ -3,18 +3,16 @@ package com.jembranakab.simas.model.viewmodel
 import android.util.Log
 import androidx.lifecycle.*
 import com.jembranakab.simas.model.Resource
-import com.jembranakab.simas.model.entities.Surat
+import com.jembranakab.simas.model.entities.DraftSurat
 import com.jembranakab.simas.model.entities.SuratDisposisi
 import com.jembranakab.simas.model.entities.SuratOpd
 import com.jembranakab.simas.model.network.base.SuratOpdRepo
-import com.jembranakab.simas.utilities.App.Companion.TAG
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 
 class SuratOpdViewModel(private val repo: SuratOpdRepo) : ViewModel(){
 
-    val listNomorSurat = MediatorLiveData<Resource<MutableList<Surat>>>()
+    val listNomorSurat = MediatorLiveData<Resource<MutableList<DraftSurat>>>()
     val listSuratKeluar = MediatorLiveData<Resource<MutableList<SuratOpd>>>()
     val listSuratMasuk = MediatorLiveData<Resource<MutableList<SuratOpd>>>()
     val listSuratDisposisi = MediatorLiveData<Resource<MutableList<SuratDisposisi>>>()
@@ -24,23 +22,63 @@ class SuratOpdViewModel(private val repo: SuratOpdRepo) : ViewModel(){
     var resultDetailDisposisi: LiveData<Resource<Map<String, Any>>> = MutableLiveData()
     val resultTambahNomor = MutableLiveData<Resource<String>>()
 
-    override fun onCleared() {
-        super.onCleared()
-        Log.d(TAG, "onCleared: called, viewModelScope is active = ${viewModelScope.isActive}")
+    val listDraftSurat = MediatorLiveData<Resource<List<DraftSurat>>>()
+    val resultDraftSurat = MutableLiveData<Resource<String>>()
+    val resultKoreksiDraftSurat = MutableLiveData<Resource<String>>()
+    val resultSetujuDraftSurat = MutableLiveData<Resource<String>>()
+
+    fun koreksiDraftSurat(draftSurat: DraftSurat) = viewModelScope.launch {
+        try {
+            resultKoreksiDraftSurat.value = Resource.Loading()
+            resultKoreksiDraftSurat.postValue(repo.koreksiDraftSurat(draftSurat))
+        } catch (e: Exception) {
+            resultKoreksiDraftSurat.value = Resource.Failure(e)
+        }
+    }
+
+    fun setujuDraftSurat(draftSurat: DraftSurat, thisUnit: Int) = viewModelScope.launch {
+        try {
+            resultSetujuDraftSurat.value = Resource.Loading()
+            resultSetujuDraftSurat.postValue(repo.setujuDraftSurat(draftSurat, thisUnit))
+        } catch (e: Exception) {
+            resultSetujuDraftSurat.value = Resource.Failure(e)
+        }
+    }
+
+    fun draftSurat(draftSurat: DraftSurat, tipe: Int) = viewModelScope.launch {
+        try {
+            resultDraftSurat.value = Resource.Loading()
+            resultDraftSurat.postValue(repo.draftSurat(draftSurat, tipe))
+        } catch (e: Exception) {
+            resultDraftSurat.value = Resource.Failure(e)
+        }
+    }
+
+    fun getDraftSurat(thisUnit: Int) = viewModelScope.launch {
+        val liveData =
+            liveData(Dispatchers.IO) {
+                emit(Resource.Loading())
+                try {
+                    emit(repo.getDraftSurat(thisUnit))
+                } catch (e: Exception) {
+                    emit(Resource.Failure(e))
+                }
+            }
+        listDraftSurat.addSource(liveData) { listDraftSurat.postValue(it) }
     }
 
     fun getNomorSurat(unit: Int) {
         viewModelScope.launch {
             val liveData =
-                    liveData(Dispatchers.IO) {
-                        emit(Resource.Loading())
-                        try {
-                            emit(repo.getNomorSurat(unit))
-                        } catch (e: Exception) {
-                            emit(Resource.Failure(e))
-                        }
+                liveData(Dispatchers.IO) {
+                    emit(Resource.Loading())
+                    try {
+                        emit(repo.getNomorSurat(unit))
+                    } catch (e: Exception) {
+                        emit(Resource.Failure(e))
                     }
-            listNomorSurat.addSource(liveData) {listNomorSurat.postValue(it)}
+                }
+            listNomorSurat.addSource(liveData) { listNomorSurat.postValue(it) }
         }
     }
 
@@ -128,11 +166,11 @@ class SuratOpdViewModel(private val repo: SuratOpdRepo) : ViewModel(){
         }
     }
 
-    fun tambahNomorSurat(surat: Surat) {
+    fun tambahNomorSurat(draftSurat: DraftSurat) {
         resultTambahNomor.value = Resource.Loading()
         viewModelScope.launch {
             try {
-                resultTambahNomor.value = repo.tambahNomorSurat(surat)
+                resultTambahNomor.value = repo.tambahNomorSurat(draftSurat)
             } catch (e: Exception) {
                 resultTambahNomor.value = Resource.Failure(e)
             }

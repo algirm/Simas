@@ -3,6 +3,7 @@ package com.jembranakab.simas.utilities
 class App {
     companion object {
         const val TAG = "SimasLogger"
+        const val SURAT_DB_NAME = "surat_db"
 
         const val OPERATOR = 0
         const val ORG_TOP_LAYER = 1
@@ -18,5 +19,19 @@ class App {
         const val JAWABAN = 23
         const val PENYELESAIAN = 24
         const val SURAT_MASUK = 25
+
+        object DraftSurat {
+            const val BELUM_PROSES = 0
+            const val DIAJUKAN = 1
+            const val DISETUJUI_DINAS = 2
+            const val DIKOREKSI = 3
+            const val DIAJUKAN_KEMBALI = 4
+            const val KOREKSI = 5
+            const val DISETUJUI_BIDANG = 6
+            const val DILANJUTKAN = 7
+            const val SETUJU = 8
+            const val TELAH_DIKOREKSI = 9
+        }
+
     }
 }

@@ -162,6 +162,11 @@
     <string name="nomor_surat2">Nomor Surat:</string>
     <string name="nomor2">Nomor:</string>
     <string name="belum_ada_notifikasi">Belum Ada Notifikasi</string>
+    <string name="belum_ada_surat_disposisi">Belum Ada Surat Disposisi</string>
+    <string name="draft">Draft</string>
+    <string name="diajukan_kepada">Diajukan Kepada</string>
+    <string name="draft_berhasil_diajukan">Draft berhasil disimpan dan diajukan</string>
+    <string name="setuju">Setuju</string>
 
     <string-array name="kategori_surat">
         <item>Biasa</item>

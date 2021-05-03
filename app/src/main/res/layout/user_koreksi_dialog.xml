@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/kepada_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/keterangan"
+        android:textStyle="bold"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="4dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"/>
+
+    <EditText
+        android:id="@+id/etKeterangan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:minLines="3"
+        android:maxLines="3"
+        android:layout_marginHorizontal="7dp"
+        android:layout_marginBottom="10dp"
+        android:paddingHorizontal="5dp"
+        android:gravity="top|start"
+        android:scrollbars="vertical"
+        android:background="@drawable/text_box_light"
+        tools:ignore="Autofill,LabelFor" />
+
+    <LinearLayout
+        android:id="@+id/containerBawah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/diajukan_kepada"
+            android:textStyle="bold"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="4dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/etDiajukanKepada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:maxLines="3"
+            android:enabled="false"
+            android:layout_marginHorizontal="7dp"
+            android:layout_marginBottom="10dp"
+            android:paddingHorizontal="5dp"
+            android:gravity="top|start"
+            android:scrollbars="vertical"
+            android:background="@drawable/text_box_light"
+            tools:ignore="Autofill,LabelFor" />
+
+    </LinearLayout>
+
+</LinearLayout>

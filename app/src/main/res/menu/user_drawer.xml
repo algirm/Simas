@@ -8,10 +8,10 @@
             android:id="@+id/nav_user_beranda"
             android:icon="@drawable/ic_home_black_24dp"
             android:title="@string/beranda" />
-        <item
+        <!--<item
             android:id="@+id/nav_user_carisurat"
             android:icon="@drawable/ic_baseline_search_24"
-            android:title="@string/cari_surat" />
+            android:title="@string/cari_surat" />-->
         <item
             android:id="@+id/nav_user_nomorsurat"
             android:icon="@drawable/ic_baseline_post_add_24"

@@ -8,32 +8,32 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import androidx.recyclerview.widget.RecyclerView
 import com.jembranakab.simas.R
-import com.jembranakab.simas.model.entities.Surat
+import com.jembranakab.simas.model.entities.DraftSurat
 import com.jembranakab.simas.utilities.DataConverter
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.user_item_nomorsurat.*
 
 class NomorSuratAdapter(
-        private val mList: MutableList<Surat>,
+        private val mList: MutableList<DraftSurat>,
         private val listener: ButtonAdapterListener,
         private val mContext: Context
 ) : RecyclerView.Adapter<NomorSuratAdapter.ItemViewHolder>() {
 
     inner class ItemViewHolder(override val containerView: View) : RecyclerView.ViewHolder(containerView), LayoutContainer {
 
-        fun bind(data: Surat) {
+        fun bind(data: DraftSurat) {
             with(DataConverter) {
-                nomor_tv.text = data.nomor
-                perihal_tv.text = data.perihal
+                nomor_tv.text = data.surat?.nomor
+                perihal_tv.text = data.surat?.perihal
                 atas_tv.text =
-                        if (data.kepada == 99) {
-                            data.namaDinasLuar
+                        if (data.surat?.kepada == 99) {
+                            data.surat?.namaDinasLuar
                         } else {
-                            getNamaOrgFromTopLayer(data.kepada!!)
+                            getNamaOrgFromTopLayer(data.surat?.kepada!!)
                         }
-                bawah_tv.text = getNamaOrgFromTopLayer(data.dari!!)
-                asalsurat_tv.text = getNamaOrgFromAll(data.createBy!!)
-                tanggal_tv.text = data.tanggal
+                bawah_tv.text = getNamaOrgFromTopLayer(data.surat?.dari!!)
+                asalsurat_tv.text = getNamaOrgFromAll(data.surat?.createBy!!)
+                tanggal_tv.text = data.surat?.tanggal
                 penandatangan_tv.text = bawah_tv.text
 
                 if (data.isExpanded()) {
@@ -72,6 +72,10 @@ class NomorSuratAdapter(
             button_hapus.setOnClickListener {
                 listener.hapusOnClick(it, mList[position])
             }
+
+            btDraft.setOnClickListener {
+                listener.draftOnClick(it, mList[position])
+            }
         }
     }
 
@@ -86,7 +90,8 @@ class NomorSuratAdapter(
     }
 
     interface ButtonAdapterListener {
-        fun hapusOnClick(v: View?, surat: Surat)
+        fun hapusOnClick(v: View?, surat: DraftSurat)
+        fun draftOnClick(v: View?, draftsurat: DraftSurat)
     }
 
 }

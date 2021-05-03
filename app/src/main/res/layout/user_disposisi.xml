@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="@string/belum_ada_surat_keluar"
+        android:text="@string/belum_ada_surat_disposisi"
         android:textAlignment="center"
         android:textColor="@color/teal_200"
         android:textSize="20sp"
