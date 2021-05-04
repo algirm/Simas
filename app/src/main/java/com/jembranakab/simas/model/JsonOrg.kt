@@ -15,12 +15,21 @@ class JsonOrg {
                 val batasAtas: Int
                 val batasBawah: Int
 
-                if (unit == 1) {
-                    batasAtas = 2
-                    batasBawah = 2
-                } else {
-                    batasAtas = unit * 10
-                    batasBawah = batasAtas + 9
+                val caUnit = unit.toString().toCharArray()
+
+                when {
+                    unit == 1 -> {
+                        batasAtas = 2
+                        batasBawah = 2
+                    }
+                    (caUnit[0].toString() + caUnit[1].toString()) == "11" -> {
+                        batasAtas = unit * 10
+                        batasBawah = batasAtas + 9
+                    }
+                    else -> {
+                        batasAtas = unit * 100
+                        batasBawah = batasAtas + 99
+                    }
                 }
 
                 val jsonList = (parseMyJson() as JsonArray<*>)

@@ -14,9 +14,27 @@ class DataConverter {
         fun getAtasanUnitExceptTopUnit(thisUnit: Int): Int {
             var atasan = ""
             val thisUnitCharArray = thisUnit.toString().toCharArray()
-            for (i in 0 until thisUnitCharArray.size - 1) {
-                atasan += thisUnitCharArray[i]
+
+            when {
+                thisUnit == 2 -> atasan = "1"
+                (thisUnitCharArray[0].toString() + thisUnitCharArray[1].toString()) == "11" -> {
+                    for (i in 0 until thisUnitCharArray.size - 1) {
+                        atasan += thisUnitCharArray[i]
+                    }
+                }
+                else -> {
+                    if (thisUnitCharArray.size == 5) {
+                        for (i in 0 until thisUnitCharArray.size - 2) {
+                            atasan += thisUnitCharArray[i]
+                        }
+                    } else {
+                        for (i in 0 until thisUnitCharArray.size - 1) {
+                            atasan += thisUnitCharArray[i]
+                        }
+                    }
+                }
             }
+
             return atasan.toInt()
         }
 

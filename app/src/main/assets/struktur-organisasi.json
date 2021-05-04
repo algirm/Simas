@@ -153,81 +153,1227 @@
     "unit": 12
   },
   {
+    "nama": "Operator Surat Badan Kesatuan Bangsa dan Politik",
+    "unit": -12
+  },
+  {
+    "nama": "Sekretaris Badan Kesatuan Bangsa dan Politik",
+    "unit": 121
+  },{
+    "nama": "Sub Bagian Umum dan Kepegawaian Sekretaris Badan Kesatuan Bangsa dan Politik",
+    "unit": 12111
+  },{
+    "nama": "Sub Bagian Penyusunan Program dan Keuangan Sekretaris Badan Kesatuan Bangsa dan Politik",
+    "unit": 12112
+  },
+  {
+    "nama": "Bidang Penanganan Konflik dan Kewaspadaan Nasional",
+    "unit": 122
+  },{
+    "nama": "Sub Bidang Penanganan Konflik",
+    "unit": 12211
+  },{
+    "nama": "Sub Bidang Kewaspadaan Nasional dan Kerjasama Intelegen",
+    "unit": 12212
+  },
+  {
+    "nama": "Bidang Politik Dalam Negeri dan Organisasi Kemasyarakatan",
+    "unit": 123
+  },{
+    "nama": "Sub Bidang Organisasi Kemasyarakatan",
+    "unit": 12311
+  },{
+    "nama": "Sub Bidang Politik Dalam Negeri",
+    "unit": 12312
+  },
+  {
+    "nama": "Kepala Badang Bina Ideologi, Wawasan Kebangsaan, dan Karakter Bangsa",
+    "unit": 124
+  },{
+    "nama": "Sub Bidang Pembinaan Karakter Bangsa",
+    "unit": 12411
+  },{
+    "nama": "Sub Bidang Bina Ideologi, dan Wawasan Kebangsaan",
+    "unit": 12412
+  },
+
+
+  {
     "nama": "Sekretariat DPRD",
     "unit": 13
   },
+  {
+    "nama": "Operator Surat Sekretariat DPRD",
+    "unit": -13
+  },
+  {
+    "nama": "Bagian Umum",
+    "unit": 131
+  },{
+    "nama": "Sub Bagian Tata Usaha dan Kepegawaian",
+    "unit": 13111
+  },{
+    "nama": "Sub Bagian Rumah Tangga dan Perlengkapan",
+    "unit": 13112
+  },{
+    "nama": "Sub Bagian Humas dan Protokol",
+    "unit": 13113
+  },
+  {
+    "nama": "Bagian Keuangan",
+    "unit": 132
+  },{
+    "nama": "Sub Bagian Program dan Anggaran",
+    "unit": 13211
+  },{
+    "nama": "Sub Bagian Perbendaharaan dan Pembukuan",
+    "unit": 13212
+  },{
+    "nama": "Sub Bagian Verifikasi dan Pelaporan",
+    "unit": 13213
+  },
+  {
+    "nama": "Bagian Persidangan dan Per-Undang-Undangan",
+    "unit": 133
+  },{
+    "nama": "Sub Bagian Persidangan dan Risalah",
+    "unit": 13311
+  },{
+    "nama": "Sub Bagian Perundang-Undangan dan Produk DPRD",
+    "unit": 13312
+  },{
+    "nama": "Sub Bagian Fasilitas Kerjasama dan Aspirasi",
+    "unit": 13313
+  },
+
+
   {
     "nama": "Badan Perencanaan Pembangunan Daerah, Penelitian dan Pengembangan",
     "unit": 14
   },
   {
+    "nama": "Operator Surat Badan Perencanaan Pembangunan Daerah, Penelitian dan Pengembangan",
+    "unit": -14
+  },
+  {
+    "nama": "Bidang Aparatur, Sosial Budaya, dan Infrastruktur",
+    "unit": 141
+  },{
+    "nama": "Sub Bidang Infrastruktur",
+    "unit": 14111
+  },{
+    "nama": "Sub Bidang Sosial Budaya",
+    "unit": 14112
+  },{
+    "nama": "Sub Bidang Aparatur",
+    "unit": 14113
+  },
+  {
+    "nama": "Bidang Perencanaan dan Ekonomi",
+    "unit": 142
+  },{
+    "nama": "Sub Bidang Ekonomi",
+    "unit": 14211
+  },{
+    "nama": "Sub Bidang Perumusan Kebijakan",
+    "unit": 14212
+  },{
+    "nama": "Sub Bidang Data, Evaluasi dan Pelaporan",
+    "unit": 14213
+  },
+  {
+    "nama": "Sekretaris Badan Perencanaan Pembangunan Daerah, Penelitian dan Pengembangan",
+    "unit": 143
+  },{
+    "nama": "Sub Bagian Umum dan Kepegawaian Sekretaris Badan Perencanaan Pembangunan Daerah, Penelitian dan Pengembangan",
+    "unit": 14311
+  },{
+    "nama": "Sub Bagian Penyusunan Program dan Keuangan Sekretaris Badan Perencanaan Pembangunan Daerah, Penelitian dan Pengembangan",
+    "unit": 14312
+  },
+  {
+    "nama": "Bidang Penelitian dan Pengembangan",
+    "unit": 144
+  },{
+    "nama": "Sub Bidang Inovasi dan Teknologi",
+    "unit": 14411
+  },{
+    "nama": "Sub Bidang Ekonomi dan Pembangunan",
+    "unit": 14412
+  },{
+    "nama": "Sub Bidang Sosial dan Pemerintahan",
+    "unit": 14413
+  },
+
+
+  {
     "nama": "Badan Kepegawaian dan Pengembangan Sumber Daya Manusia",
     "unit": 15
   },
+  {
+    "nama": "Operator Surat Badan Kepegawaian dan Pengembangan Sumber Daya Manusia",
+    "unit": -15
+  },
+  {
+    "nama": "Sekretaris Badan Kepegawaian dan Pengembangan Sumber Daya Manusia",
+    "unit": 151
+  },{
+    "nama": "Sub Bagian Umum dan Kepegawaian Sekretaris Badan Kepegawaian dan Pengembangan Sumber Daya Manusia",
+    "unit": 15111
+  },{
+    "nama": "Sub Bagian Penyusunan Program dan Keuangan Sekretaris Badan Kepegawaian dan Pengembangan Sumber Daya Manusia",
+    "unit": 15112
+  },
+  {
+    "nama": "Bidang Pengadaan, Penataan dan Pola Karir",
+    "unit": 152
+  },{
+    "nama": "Sub Bidang Formasi, Pengadaan dan Pola Karir Pegawai",
+    "unit": 15211
+  },{
+    "nama": "Sub Bidang Penataan Jabatan Struktural",
+    "unit": 15212
+  },{
+    "nama": "Sub Bidang Penataan Jabatan Fungsional",
+    "unit": 15213
+  },
+  {
+    "nama": "Bidang Data dan Mutasi Pegawai",
+    "unit": 153
+  },{
+    "nama": "Sub Bidang Data dan Informasi Pegawai",
+    "unit": 15311
+  },{
+    "nama": "Sub Bidang Mutasi dan Pensiun Pegawai",
+    "unit": 15312
+  },{
+    "nama": "Sub Bidang Pembinaan Disiplin dan Kesejahteraan Pegawai",
+    "unit": 15313
+  },
+  {
+    "nama": "Bidang Pengembangan Sumber Daya Manusia",
+    "unit": 154
+  },{
+    "nama": "Sub Bidang Perencanaan Pengembangan dan Evaluasi Sumber Daya",
+    "unit": 15411
+  },{
+    "nama": "Sub Bidang Diklat Kader dan Kepemimpinan",
+    "unit": 15412
+  },{
+    "nama": "Sub Bidang Diklat Teknis dan Fungsional",
+    "unit": 15413
+  },
+
+
   {
     "nama": "Badan Pengelolaan Keuangan dan Aset Daerah",
     "unit": 16
   },
   {
+    "nama": "Operator Surat Badan Pengelolaan Keuangan dan Aset Daerah",
+    "unit": -16
+  },
+  {
+    "nama": "Sekretaris Badan Pengelolaan Keuangan dan Aset Daerah",
+    "unit": 161
+  },{
+    "nama": "Sub Bagian Umum dan Kepegawaian Sekretaris Badan Pengelolaan Keuangan dan Aset Daerah",
+    "unit": 16111
+  },{
+    "nama": "Sub Bagian Penyusunan Program Sekretaris Badan Pengelolaan Keuangan dan Aset Daerah",
+    "unit": 16112
+  },{
+    "nama": "Sub Bagian Keuangan Sekretaris Badan Pengelolaan Keuangan dan Aset Daerah",
+    "unit": 16113
+  },
+  {
+    "nama": "Bidang Anggaran",
+    "unit": 162
+  },{
+    "nama": "Sub Bidang Anggaran Pendapatan",
+    "unit": 16211
+  },{
+    "nama": "Sub Bidang Anggaran Belanja Tidak Langsung",
+    "unit": 16212
+  },{
+    "nama": "Sub Bidang Anggaran Belanja Langsung",
+    "unit": 16213
+  },
+  {
+    "nama": "Bidang Perbendaharaan",
+    "unit": 163
+  },{
+    "nama": "Sub Bidang Belanja Langsung Non Gaji",
+    "unit": 16311
+  },{
+    "nama": "Sub Bidang Belanja Langsung",
+    "unit": 16312
+  },{
+    "nama": "Sub Bidang Belanja Gaji",
+    "unit": 16313
+  },
+  {
+    "nama": "Bidang PBB dan BPHTB",
+    "unit": 164
+  },{
+    "nama": "Sub Bidang Pendaftaran dan Pendataan",
+    "unit": 16411
+  },{
+    "nama": "Sub Bidang Penetapan",
+    "unit": 16412
+  },{
+    "nama": "Sub Bidang Penagihan dan Keberatan",
+    "unit": 16413
+  },
+  {
+    "nama": "Bidang Pajak Daerah Lainnya",
+    "unit": 165
+  },{
+    "nama": "Sub Bidang Pendaftaran dan Pendataan",
+    "unit": 16511
+  },{
+    "nama": "Sub Bidang Penetapan",
+    "unit": 16512
+  },{
+    "nama": "Sub Bidang Penagihan dan Keberatan",
+    "unit": 16513
+  },
+  {
+    "nama": "Bidang Aset",
+    "unit": 166
+  },{
+    "nama": "Sub Bidang Perencanaan Kebutuhan dan Pemanfaatan Aset",
+    "unit": 16611
+  },{
+    "nama": "Sub Bidang Penata Usahaan Persediaan dan Aset Lainnya",
+    "unit": 16612
+  },{
+    "nama": "Sub Bidang Penata Usahaan Aset Tetap",
+    "unit": 16613
+  },
+  {
+    "nama": "Bidang Akutansi Dan Pelaporan",
+    "unit": 167
+  },{
+    "nama": "Sub Bidang Akutansi dan Pelaporan Pendapatan Daerah",
+    "unit": 16711
+  },{
+    "nama": "Sub Bidang Akutansi dan Pelaporan Belanja Daerah",
+    "unit": 16712
+  },{
+    "nama": "Sub Bidang Laporan Keuangan Daerah",
+    "unit": 16713
+  },
+
+
+  {
     "nama": "Dinas Pekerjaan Umum dan Penataan Ruang, Perumahan dan Kawasan Permukiman",
     "unit": 17
   },
+  {
+    "nama": "Operator Surat Dinas Pekerjaan Umum dan Penataan Ruang, Perumahan dan Kawasan Permukiman",
+    "unit": -17
+  },
+  {
+    "nama": "Sekretaris Dinas Pekerjaan Umum dan Penataan Ruang, Perumahan dan Kawasan Permukiman",
+    "unit": 171
+  },{
+    "nama": "Sub Bagian Umum dan Kepegawaian Sekretaris Dinas Pekerjaan Umum dan Penataan Ruang, Perumahan dan Kawasan Permukiman",
+    "unit": 17111
+  },{
+    "nama": "Sub Bagian Keuangan Sekretaris Dinas Pekerjaan Umum dan Penataan Ruang, Perumahan dan Kawasan Permukiman",
+    "unit": 17112
+  },{
+    "nama": "Sub Bagian Program, Evaluasi, dan Pelaporan Sekretaris Dinas Pekerjaan Umum dan Penataan Ruang, Perumahan dan Kawasan Permukiman",
+    "unit": 17113
+  },
+  {
+    "nama": "Bidang Bina Marga",
+    "unit": 172
+  },{
+    "nama": "Seksi Perencanaan dan Pembinaan Bina Marga",
+    "unit": 17211
+  },{
+    "nama": "Seksi Pembangunan dan Pengelolaan Bina Marga",
+    "unit": 17212
+  },{
+    "nama": "Seksi Pengawasan dan Kengendalian Bina Marga",
+    "unit": 17213
+  },
+  {
+    "nama": "Bidang Sumber Daya Air",
+    "unit": 173
+  },{
+    "nama": "Seksi Perencanaan dan Pembinaan Sumber Daya Air",
+    "unit": 17311
+  },{
+    "nama": "Seksi Pengembangan dan Pengelolaan Sumber Daya Air",
+    "unit": 17312
+  },{
+    "nama": "Seksi Pengawasan Sumber Daya Air",
+    "unit": 17313
+  },
+  {
+    "nama": "Bidang Cipta Karya",
+    "unit": 174
+  },{
+    "nama": "Seksi Tata Bangunan dan Lingkungan Hidup",
+    "unit": 17411
+  },{
+    "nama": "Seksi Bangunan Gedung",
+    "unit": 17412
+  },{
+    "nama": "Seksi Penyehatan Lingkungan Permukiman",
+    "unit": 17413
+  },
+  {
+    "nama": "Bidang Perumahan dan Kawasan Permukiman",
+    "unit": 175
+  },{
+    "nama": "Seksi Perumahan",
+    "unit": 17511
+  },{
+    "nama": "Seksi Pemukiman",
+    "unit": 17512
+  },{
+    "nama": "Seksi Prasarana, Sarana, dan Fasilitas Umum",
+    "unit": 17513
+  },
+  {
+    "nama": "Bidang Tata Ruang dan Pertanahan",
+    "unit": 176
+  },{
+    "nama": "Seksi Perencanaan dan Pembinaan Tata Ruang",
+    "unit": 17611
+  },{
+    "nama": "Seksi Pertanahan",
+    "unit": 17612
+  },{
+    "nama": "Seksi Pengendalian dan Pemanfaatan Tata Ruang",
+    "unit": 17613
+  },
+
+
   {
     "nama": "Dinas Perhubungan, Kelautan dan Perikanan",
     "unit": 18
   },
   {
+    "nama": "Operator Surat Dinas Perhubungan, Kelautan dan Perikanan",
+    "unit": -18
+  },
+  {
+    "nama": "Sekretaris Dinas Perhubungan, Kelautan dan Perikanan",
+    "unit": 181
+  },{
+    "nama": "Sub Bagian Umum Kepegawaian Sekretaris Dinas Perhubungan, Kelautan dan Perikanan",
+    "unit": 18111
+  },{
+    "nama": "Sub Bagian Penyusunan Program dan Keuangan Sekretaris Dinas Perhubungan, Kelautan dan Perikanan",
+    "unit": 18112
+  },
+  {
+    "nama": "Bidang Perikanan Tangkap",
+    "unit": 182
+  },{
+    "nama": "Seksi Pengelolaan Sumber Daya Ikan",
+    "unit": 18211
+  },{
+    "nama": "Seksi Pengembangan Usaha Perikanan",
+    "unit": 18212
+  },{
+    "nama": "Seksi Kelembagaan Nelayan Kecil",
+    "unit": 18213
+  },
+  {
+    "nama": "Bidang Perikanan Budidaya",
+    "unit": 183
+  },{
+    "nama": "Seksi Produksi dan Pemberdayaan",
+    "unit": 18311
+  },{
+    "nama": "Seksi Perbenihan dan Fasilitas Kawasan",
+    "unit": 18312
+  },{
+    "nama": "Seksi Pengolahan, Pemasaran dan Sumber Daya",
+    "unit": 18313
+  },
+  {
+    "nama": "Bidang Perhubungan",
+    "unit": 184
+  },{
+    "nama": "Seksi Lalulintas dan Angkutan",
+    "unit": 18411
+  },{
+    "nama": "Seksi Manajemen Rekayasa Lalulintas dan Sarana Prasarana",
+    "unit": 18412
+  },{
+    "nama": "Seksi Teknik Sarana dan Pengujian Kendaraan Bermotor",
+    "unit": 18413
+  },
+
+
+  {
     "nama": "Dinas Lingkungan Hidup",
     "unit": 19
   },
+  {
+    "nama": "Operator Surat Dinas Lingkungan Hidup",
+    "unit": -19
+  },
+  {
+    "nama": "Sekretaris Dinas Lingkungan Hidup",
+    "unit": 191
+  },{
+    "nama": "Sub Bagian Umum dan Kepegawaian Sekretaris Dinas Lingkungan Hidup",
+    "unit": 19111
+  },{
+    "nama": "Sub Bagian Penyusunan Program dan Keuangan Sekretaris Dinas Lingkungan Hidup",
+    "unit": 19112
+  },
+  {
+    "nama": "Bidang Penataan dan Penaatan Perlindungan dan Pengelolaan Lingkungan Hidup",
+    "unit": 192
+  },{
+    "nama": "Seksi Perencanaan dan Kajian Dampak Lingkungan",
+    "unit": 19211
+  },{
+    "nama": "Seksi Pengendalian Pencemaran dan Kerusakan Lingkungan",
+    "unit": 19212
+  },{
+    "nama": "Seksi Pengaduan, Penyelesaian Sengketa dan Penegakan Hukum Lingkungan",
+    "unit": 19213
+  },
+  {
+    "nama": "Bidang Pengembangan, Kapasitas Lingkungan Hidup dan Pertamanan",
+    "unit": 193
+  },{
+    "nama": "Seksi Perencanaan dan Pengembangan Pertamanan",
+    "unit": 19311
+  },{
+    "nama": "Seksi Pengelolaan Pertamanan",
+    "unit": 19312
+  },{
+    "nama": "Seksi Pengembangan Kapasitas Lingkungan Hidup",
+    "unit": 19313
+  },
+  {
+    "nama": "Bidang Kebersihan",
+    "unit": 194
+  },{
+    "nama": "Seksi Pelayanan Persampahan dan Retribusi",
+    "unit": 19411
+  },{
+    "nama": "Seksi Pengelolaan Persampahan",
+    "unit": 19412
+  },{
+    "nama": "Seksi Pengelolaan Limbah B3",
+    "unit": 19413
+  },
+
   {
     "nama": "Dinas Kesehatan",
     "unit": 20
   },
   {
+    "nama": "Operator Surat Dinas Kesehatan",
+    "unit": -20
+  },
+  {
+    "nama": "Sekretaris Dinas Kesehatan",
+    "unit": 201
+  },{
+    "nama": "Sub Bagian Umum dan Kepegawaian Sekretaris Dinas Kesehatan",
+    "unit": 20111
+  },{
+    "nama": "Sub Bagian Penyusunan Program dan Keuangan Sekretaris Dinas Kesehatan",
+    "unit": 20112
+  },
+  {
+    "nama": "Bidang Kesehatan Masyarakat",
+    "unit": 202
+  },{
+    "nama": "Seksi Kesehatan Keluarga dan Gizi",
+    "unit": 20211
+  },{
+    "nama": "Seksi Promosi dan Pemberdayaan Masyarakat",
+    "unit": 20212
+  },{
+    "nama": "Seksi Kesehatan Lingkungan, Kesehatan Kerja dan Olahraga",
+    "unit": 20213
+  },
+  {
+    "nama": "Bidang Pencegahan dan Pengendalian Penyakit",
+    "unit": 203
+  },{
+    "nama": "Seksi Survailans dan Imunisasi",
+    "unit": 20311
+  },{
+    "nama": "Seksi Pencegahan dan Pengendalian Penyakit Menular",
+    "unit": 20312
+  },{
+    "nama": "Seksi Pencegahan dan Pengendalian Penyakit Tidak Menular dan Kesehatan Jiwa",
+    "unit": 20313
+  },
+  {
+    "nama": "Bidang Pelayanan dan Sumber Daya Kesehatan",
+    "unit": 204
+  },{
+    "nama": "Seksi Pelayanan Kesehatan",
+    "unit": 20411
+  },{
+    "nama": "Seksi Kefarmasian, Alkes dan PKRT",
+    "unit": 20412
+  },{
+    "nama": "Seksi Sumberdaya Kesehatan",
+    "unit": 20413
+  },
+
+
+  {
     "nama": "Dinas Kependudukan dan Pencatatan Sipil",
     "unit": 21
   },
+  {
+    "nama": "Operator Surat Dinas Kependudukan dan Pencatatan Sipil",
+    "unit": -21
+  },
+  {
+    "nama": "Sekretaris Dinas Kependudukan dan Pencatatan Sipil",
+    "unit": 211
+  },{
+    "nama": "Sub Bagian Umum dan Kepegawaian Sekretaris Dinas Kependudukan dan Pencatatan Sipil",
+    "unit": 21111
+  },{
+    "nama": "Sub Bagian Perencanaan dan Keuangan Sekretaris Dinas Kependudukan dan Pencatatan Sipil",
+    "unit": 21112
+  },
+  {
+    "nama": "Bidang Pelayanan Administrasi Kependudukan",
+    "unit": 212
+  },{
+    "nama": "Seksi Pelayanan Pendaftaran Penduduk",
+    "unit": 21211
+  },{
+    "nama": "Seksi Pelayanan Pencatatan Sipil",
+    "unit": 21212
+  },{
+    "nama": "Seksi Pendokumentasian Dokumen Kependudukan",
+    "unit": 21213
+  },
+  {
+    "nama": "Bidang PIAK dan Pemanfaatan Data",
+    "unit": 213
+  },{
+    "nama": "Seksi Sistem Informasi ADM Kependudukan",
+    "unit": 21311
+  },{
+    "nama": "Seksi Pengolahan dan Penyajian Data",
+    "unit": 21312
+  },
+{
+    "nama": "Seksi Kerja Sama dan Inovasi Pelayanan",
+    "unit": 21313
+  },
+
+
   {
     "nama": "Dinas Komunikasi dan Informatika",
     "unit": 22
   },
   {
+    "nama": "Operator Surat Dinas Komunikasi dan Informatika",
+    "unit": -22
+  },
+  {
+    "nama": "Sekretaris Dinas Komunikasi dan Informatika",
+    "unit": 221
+  },{
+    "nama": "Sub Bagian Umum dan Kepegawaian Sekretaris Dinas Komunikasi dan Informatika",
+    "unit": 22111
+  },{
+    "nama": "Sub Bagian Penyusunan Program dan Keuangan Sekretaris Dinas Komunikasi dan Informatika",
+    "unit": 22112
+  },
+  {
+    "nama": "Bidang Infrastruktur dan Aplikasi",
+    "unit": 222
+  },{
+    "nama": "Seksi Infrastruktur dan Teknologi",
+    "unit": 22211
+  },{
+    "nama": "Seksi Aplikasi dan Pengelolaan E-Government",
+    "unit": 22212
+  },{
+    "nama": "Seksi Keamanan Informasi dan Telekomunikasi",
+    "unit": 22213
+  },
+  {
+    "nama": "Bidang Pengelolaan Informasi dan Komunikasi",
+    "unit": 223
+  },{
+    "nama": "Seksi Pelayanan Informasi dan Komunikasi Publik",
+    "unit": 22311
+  },{
+    "nama": "Seksi Tatakelola dan Sumber Daya TIK",
+    "unit": 22312
+  },{
+    "nama": "Seksi Persandian",
+    "unit": 22313
+  },
+  {
+    "nama": "Bidang Statistik",
+    "unit": 224
+  },{
+    "nama": "Seksi Pengolahan Data Statistik Sektoral",
+    "unit": 22411
+  },{
+    "nama": "Seksi Pengumpulan Data Statistik Sektoral",
+    "unit": 22412
+  },{
+    "nama": "Seksi Data Statistik Elektronik",
+    "unit": 22413
+  },
+
+
+  {
     "nama": "Dinas Pemberdayaan Perempuan dan Perlindungan Anak, Pengendalian Penduduk dan Keluarga Berencana",
     "unit": 23
   },
+  {
+    "nama": "Operator Surat Dinas Pemberdayaan Perempuan dan Perlindungan Anak, Pengendalian Penduduk dan Keluarga Berencana",
+    "unit": -23
+  },
+  {
+    "nama": "Sekretaris Dinas Pemberdayaan Perempuan dan Perlindungan Anak, Pengendalian Penduduk dan Keluarga Berencana",
+    "unit": 231
+  },{
+    "nama": "Sub Bagian Umum dan Kepegawaian Sekretaris Dinas Pemberdayaan Perempuan dan Perlindungan Anak, Pengendalian Penduduk dan Keluarga Berencana",
+    "unit": 23111
+  },{
+    "nama": "Sub Bagian Penyusunan Program dan Keuangan Sekretaris Dinas Pemberdayaan Perempuan dan Perlindungan Anak, Pengendalian Penduduk dan Keluarga Berencana",
+    "unit": 23112
+  },
+  {
+    "nama": "Bidang Keluarga Berencana, Penyuluhan dan Penggerakan",
+    "unit": 232
+  },{
+    "nama": "Seksi Advokasi, Data dan Informasi Keluarga",
+    "unit": 23211
+  },{
+    "nama": "Seksi Pelayanan KB, Pengendalian dan Distribusi Alat Kontrasepsi",
+    "unit": 23212
+  },{
+    "nama": "Seksi Penyuluhan, Penggerakan dan Peningkatan Kesertaan Ber-KB",
+    "unit": 23213
+  },
+  {
+    "nama": "Bidang Ketahanan, Kualitas Keluarga dan Pengendalian Penduduk",
+    "unit": 233
+  },{
+    "nama": "Seksi Pemberdayaan Keluarga",
+    "unit": 23311
+  },{
+    "nama": "Seksi Ketahanan Keluarga Sejahtera",
+    "unit": 23312
+  },{
+    "nama": "Seksi Pengendalian Penduduk",
+    "unit": 23313
+  },
+  {
+    "nama": "Bidang Pemberdayaan Perempuan dan Perlindungan Penduduk",
+    "unit": 234
+  },{
+    "nama": "Seksi Pemberdayaan Perempuan",
+    "unit": 23411
+  },{
+    "nama": "Seksi Perlindungan Anak",
+    "unit": 23412
+  },{
+    "nama": "Seksi Kesetaraan Gender dan Partisipasi Masyarakat",
+    "unit": 23413
+  },
+
+
   {
     "nama": "Dinas Pendidikan, Kepemudaan dan Olahraga",
     "unit": 24
   },
   {
+    "nama": "Operator Surat Dinas Pendidikan, Kepemudaan dan Olahraga",
+    "unit": -24
+  },
+  {
+    "nama": "Sekretaris Dinas Pendidikan, Kepemudaan dan Olahraga",
+    "unit": 241
+  },{
+    "nama": "Sub Bagian Umum dan Kepegawaian Sekretaris Dinas Pendidikan, Kepemudaan dan Olahraga",
+    "unit": 24111
+  },{
+    "nama": "Sub Bagian Penyusunan Program dan Keuangan Sekretaris Dinas Pendidikan, Kepemudaan dan Olahraga",
+    "unit": 24112
+  },
+  {
+    "nama": "Bidang Pendidikan Dasar",
+    "unit": 242
+  },{
+    "nama": "Seksi Kurikulum dan Peserta Didik",
+    "unit": 24211
+  },{
+    "nama": "Seksi Kelembagaan dan Sarana Prasarana",
+    "unit": 24212
+  },{
+    "nama": "Seksi Pendidik dan Tenaga Kependidikan",
+    "unit": 24213
+  },
+  {
+    "nama": "Bidang Pembinaan PAUD dan Pendidikan Masyarakat",
+    "unit": 243
+  },{
+    "nama": "Seksi Kurikulum dan Peserta Didik",
+    "unit": 24311
+  },{
+    "nama": "Seksi Kelembagaan dan Sarana Prasarana",
+    "unit": 24312
+  },{
+    "nama": "Seksi Pendidik dan Tenaga Kependidikan",
+    "unit": 24313
+  },
+  {
+    "nama": "Bidang Kepemudaan dan Olahraga",
+    "unit": 244
+  },{
+    "nama": "Seksi Pemberdayaan Pemuda dan Kepramukaan",
+    "unit": 24411
+  },{
+    "nama": "Seksi Pemberdayaan Olahraga",
+    "unit": 24412
+  },{
+    "nama": "Seksi Sarana dan Tenaga Teknis",
+    "unit": 24413
+  },
+
+
+  {
     "nama": "Dinas Pariwisata dan Kebudayaan",
     "unit": 25
   },
+  {
+    "nama": "Operator Surat Dinas Pariwisata dan Kebudayaan",
+    "unit": -25
+  },
+  {
+    "nama": "Sekretaris Dinas Pariwisata dan Kebudayaan",
+    "unit": 251
+  },{
+    "nama": "Sub Bagian Umum dan Kepegawaian Sekretaris Dinas Pariwisata dan Kebudayaan",
+    "unit": 25111
+  },{
+    "nama": "Sub Bagian Penyusunan Program dan Keuangan Sekretaris Dinas Pariwisata dan Kebudayaan",
+    "unit": 25112
+  },
+  {
+    "nama": "Bidang Kebudayaan",
+    "unit": 252
+  },{
+    "nama": "Seksi Lembaga Adat dan Tradisi",
+    "unit": 25211
+  },{
+    "nama": "Seksi Pelestarian dan Pengembangan Seni",
+    "unit": 25212
+  },{
+    "nama": "Seksi Sejarah, Purbakala dan Musium",
+    "unit": 25213
+  },
+  {
+    "nama": "Bidang Pariwisata",
+    "unit": 253
+  },{
+    "nama": "Seksi Pengembangan dan Pengelolaan Destinasi",
+    "unit": 25311
+  },{
+    "nama": "Seksi Pemasaran dan Pengembangan Ekonomi Kreatif",
+    "unit": 25312
+  },{
+    "nama": "Seksi Pengendalian Usaha dan Daya Tarik Wisata",
+    "unit": 25313
+  },
+
+
   {
     "nama": "Dinas Penanaman Modal, Pelayanan Terpadu Satu Pintu dan Tenaga Kerja",
     "unit": 26
   },
   {
+    "nama": "Operator Surat Dinas Penanaman Modal, Pelayanan Terpadu Satu Pintu dan Tenaga Kerja",
+    "unit": -26
+  },
+  {
+    "nama": "Sekretaris Dinas Penanaman Modal, Pelayanan Terpadu Satu Pintu dan Tenaga Kerja",
+    "unit": 261
+  },{
+    "nama": "Sub Bagian Umum dan Kepegawaian Sekretaris Dinas Penanaman Modal, Pelayanan Terpadu Satu Pintu dan Tenaga Kerja",
+    "unit": 26111
+  },{
+    "nama": "Sub Bagian Penyusunan Program dan Keuangan Sekretaris Dinas Penanaman Modal, Pelayanan Terpadu Satu Pintu dan Tenaga Kerja",
+    "unit": 26112
+  },
+  {
+    "nama": "Bidang Penanaman Modal",
+    "unit": 262
+  },{
+    "nama": "Seksi Pengkajian dan Pengembangan",
+    "unit": 26211
+  },{
+    "nama": "Seksi Promosi Investasi",
+    "unit": 26212
+  },{
+    "nama": "Seksi Pengendalian dan Pelaksanaan",
+    "unit": 26213
+  },
+  {
+    "nama": "Bidang Penyelenggaraan Pelayanan Perizinan dan Non Perizinan",
+    "unit": 263
+  },{
+    "nama": "Seksi Pelayanan Perizinan dan Non Perizinan",
+    "unit": 26311
+  },{
+    "nama": "Seksi Pelayanan Perizinan dan Non Perizinan II",
+    "unit": 26312
+  },{
+    "nama": "Seksi Pelayanan Perizinan dan Non Perizinan III",
+    "unit": 26313
+  },
+  {
+    "nama": "Bidang Pengaduan Kebijakan dan Pelaporan Layanan",
+    "unit": 264
+  },{
+    "nama": "Seksi Pengaduan dan Informasi Layanan",
+    "unit": 26411
+  },{
+    "nama": "Seksi Kebijakan dan Penyuluhan Layanan",
+    "unit": 26412
+  },{
+    "nama": "Seksi Pelaporan dan Peningkatan Layanan",
+    "unit": 26413
+  },
+  {
+    "nama": "Bidang Hubungan Industrial",
+    "unit": 265
+  },{
+    "nama": "Seksi Persyaratan Kesejahteraan Pekerja",
+    "unit": 26511
+  },{
+    "nama": "Seksi Perlindungan Tenaga Kerja",
+    "unit": 26512
+  },
+  {
+    "nama": "Bidang Pelatihan, Produktifitas, Penempatan dan ...",
+    "unit": 266
+  },{
+    "nama": "Seksi Pelatihan, Produktifitas dan Transmigrasi",
+    "unit": 26611
+  },{
+    "nama": "Seksi Penempatan Tenaga Kerja",
+    "unit": 26612
+  },
+
+
+  {
     "nama": "Dinas Perpustakaan dan Kearsipan",
     "unit": 27
   },
+  {
+    "nama": "Operator Surat Dinas Perpustakaan dan Kearsipan",
+    "unit": -27
+  },
+  {
+    "nama": "Sekretaris Dinas Perpustakaan dan Kearsipan",
+    "unit": 271
+  },{
+    "nama": "Sub Bagian Umum dan Kepegawaian Sekretaris Dinas Perpustakaan dan Kearsipan",
+    "unit": 27111
+  },{
+    "nama": "Sub Bagian Penyusunan Program dan Keuangan Sekretaris Dinas Perpustakaan dan Kearsipan",
+    "unit": 27112
+  },
+  {
+    "nama": "Bidang Perpustakaan",
+    "unit": 272
+  },{
+    "nama": "Seksi Pembinaan dan Layanan Perpustakaan",
+    "unit": 27211
+  },{
+    "nama": "Seksi Pengembangan dan Pengolahan Bahan Pustaka",
+    "unit": 27212
+  },{
+    "nama": "Seksi Pelestarian Bahan Pustaka",
+    "unit": 27213
+  },
+  {
+    "nama": "Bidang Kearsipan",
+    "unit": 273
+  },{
+    "nama": "Seksi Pembinaan Kearsipan",
+    "unit": 27311
+  },{
+    "nama": "Seksi Pengawasan Kearsipan",
+    "unit": 27312
+  },{
+    "nama": "Seksi Pengelolaan Kearsipan",
+    "unit": 27313
+  },
+
+
   {
     "nama": "Dinas Pemberdayaan Masyarakat dan Desa",
     "unit": 28
   },
   {
+    "nama": "Operator Surat Dinas Pemberdayaan Masyarakat dan Desa",
+    "unit": -28
+  },
+  {
+    "nama": "Sekretaris Dinas Pemberdayaan Masyarakat dan Desa",
+    "unit": 281
+  },{
+    "nama": "Sub Bagian Umum dan Kepegawaian Sekretaris Dinas Pemberdayaan Masyarakat dan Desa",
+    "unit": 28111
+  },{
+    "nama": "Sub Bagian Penyusunan Program dan Keuangan Sekretaris Dinas Pemberdayaan Masyarakat dan Desa",
+    "unit": 28112
+  },
+  {
+    "nama": "Bidang Pemberdayaan Ekonomi Masyarakat dan Kesejahteraan",
+    "unit": 282
+  },{
+    "nama": "Seksi Pengembangan Usaha Ekonomi Masyarakat dan Desa",
+    "unit": 28211
+  },{
+    "nama": "Seksi Pemberdayaan Masyarakat dan Penanggulangan Kemiskinan",
+    "unit": 28212
+  },{
+    "nama": "Seksi Fasilitas Pemberdayaan Kesejahteraan Keluarga",
+    "unit": 28213
+  },
+  {
+    "nama": "Bidang Pengembangan Partisifasi dan Pemberdayaan Kawasan Perdesaan",
+    "unit": 283
+  },{
+    "nama": "Seksi Pengembangan Partisifasi dan Kewaspadaan Masyarakat",
+    "unit": 28311
+  },{
+    "nama": "Seksi Pengembangan Sarana dan Prasarana Dasar Perdesaan dan Teknologi Tepat Guna",
+    "unit": 28312
+  },{
+    "nama": "Seksi Fasilitas Kerjasama Desa Pengembangan Sumber Daya Alam",
+    "unit": 28313
+  },
+  {
+    "nama": "Bidang Pemerintahan Desa dan Kelurahan",
+    "unit": 284
+  },{
+    "nama": "Seksi Pengembangan Kapasitas Aparatur dan Kelembagaan Desa/Kelurahan",
+    "unit": 28411
+  },{
+    "nama": "Seksi Perencanaan dan Evaluasi Perkembangan Desa/Kelurahan",
+    "unit": 28412
+  },{
+    "nama": "Seksi Pengelolaan Keuangan dan Aset Desa",
+    "unit": 28413
+  },
+
+
+  {
     "nama": "Dinas Pertanian dan Pangan",
     "unit": 29
   },
+  {
+    "nama": "Operator Surat Dinas Pertanian dan Pangan",
+    "unit": -29
+  },
+  {
+    "nama": "Sekretaris Dinas Pertanian dan Pangan",
+    "unit": 291
+  },{
+    "nama": "Sub Bagian Umum dan Kepegawaian Sekretaris Dinas Pertanian dan Pangan",
+    "unit": 29111
+  },{
+    "nama": "Sub Bagian Keuangan dan Perlengkapan Sekretaris Dinas Pertanian dan Pangan",
+    "unit": 29112
+  },{
+    "nama": "Sub Bagian Penyusunan Program, Evaluasi dan Pelaporan Sekretaris Dinas Pertanian dan Pangan",
+    "unit": 29113
+  },
+  {
+    "nama": "Bidang Pertanian",
+    "unit": 292
+  },{
+    "nama": "Seksi Produksi Tanaman Pangan dan Hortikultura",
+    "unit": 29211
+  },{
+    "nama": "Seksi Bina Usaha Tanaman Pangan dan Hortikultura",
+    "unit": 29212
+  },{
+    "nama": "Seksi Prasarana dan Sarana Pertanian",
+    "unit": 29213
+  },
+  {
+    "nama": "Bidang Perkebunan",
+    "unit": 293
+  },{
+    "nama": "Seksi Produksi Perkebunan",
+    "unit": 29311
+  },{
+    "nama": "Seksi Bina Usaha Perkebunan",
+    "unit": 29312
+  },{
+    "nama": "Seksi Prasarana dan Sarana Perkebunan",
+    "unit": 29313
+  },
+  {
+    "nama": "Bidang Kesehatan Hewan dan Kesehatan Masyarakat Veteriner",
+    "unit": 294
+  },{
+    "nama": "Seksi Pengamatan dan Penyidikan Penyakit Hewan",
+    "unit": 29411
+  },{
+    "nama": "Seksi Kesehatan Hewan",
+    "unit": 29412
+  },{
+    "nama": "Seksi Kesehatan Masyarakat Veteriner",
+    "unit": 29413
+  },
+  {
+    "nama": "Bidang Peternakan",
+    "unit": 295
+  },{
+    "nama": "Seksi Produksi Peternakan",
+    "unit": 29511
+  },{
+    "nama": "Seksi Usaha Peternakan",
+    "unit": 29512
+  },{
+    "nama": "Seksi Prasarana dan Sarana Peternakan",
+    "unit": 29513
+  },
+  {
+    "nama": "Bidang Ketahanan Pangan dan Penyuluhan",
+    "unit": 296
+  },{
+    "nama": "Seksi Ketersediaan dan Distribusi Pangan",
+    "unit": 29611
+  },{
+    "nama": "Seksi Konsumsi dan Keamanan Pangan",
+    "unit": 29612
+  },{
+    "nama": "Seksi Penyuluhan dan Kelembagaan",
+    "unit": 29613
+  },
+
+
   {
     "nama": "Dinas Koperasi, Usaha Kecil Menengah, Perindustrian dan Perdagangan",
     "unit": 30
   },
   {
+    "nama": "Operator Surat Dinas Koperasi, Usaha Kecil Menengah, Perindustrian dan Perdagangan",
+    "unit": -30
+  },
+  {
+    "nama": "Sekretaris Dinas Koperasi, Usaha Kecil Menengah, Perindustrian dan Perdagangan",
+    "unit": 301
+  },{
+    "nama": "Sub Bagian Umum dan Kepegawaian Sekretaris Dinas Koperasi, Usaha Kecil Menengah, Perindustrian dan Perdagangan",
+    "unit": 30111
+  },{
+    "nama": "Sub Bagian Penyusunan Program dan Keuangan Sekretaris Dinas Koperasi, Usaha Kecil Menengah, Perindustrian dan Perdagangan",
+    "unit": 30112
+  },
+  {
+    "nama": "Bidang Koperasi dan Usaha Kecil Menengah",
+    "unit": 302
+  },{
+    "nama": "Seksi Kelembagaan dan Usaha Koperasi",
+    "unit": 30211
+  },{
+    "nama": "Seksi Pemberdayaan dan Pengawasan Usaha Koperasi",
+    "unit": 30212
+  },{
+    "nama": "Seksi Usaha Menengah, Kecil, dan Mikro",
+    "unit": 30213
+  },
+  {
+    "nama": "Bidang Perindustrian",
+    "unit": 303
+  },{
+    "nama": "Seksi Industri Menengah, Kecil dan Rumah Tangga",
+    "unit": 30311
+  },{
+    "nama": "Seksi Pembinaan Usaha Sarana dan Pengembangan Industri",
+    "unit": 30312
+  },{
+    "nama": "Seksi Pengenalan Produksi Industri Kreatif",
+    "unit": 30313
+  },{
+    "nama": "Bidang Perdagangan",
+    "unit": 304
+  },{
+    "nama": "Seksi Pembinaan dan Pengembangan Usaha",
+    "unit": 30411
+  },{
+    "nama": "Seksi Perlindungan Konsumen",
+    "unit": 30412
+  },{
+    "nama": "Seksi Promosi dan Penyaluran",
+    "unit": 30413
+  },
+
+
+  {
     "nama": "Dinas Sosial",
     "unit": 31
+  },{
+    "nama": "Operator Surat Dinas Sosial",
+    "unit": -31
+  },{
+    "nama": "Sekretaris Dinas Sosial",
+    "unit": 311
+  },{
+    "nama": "Sub Bagian Umum dan Kepegawaian Sekretaris Dinas Sosial",
+    "unit": 31111
+  },{
+    "nama": "Sub Bagian Penyusunan Program dan Pelaporan Sekretaris Dinas Sosial",
+    "unit": 31112
   },
+  {
+    "nama": "Bidang Rehabilitasi Sosial",
+    "unit": 312
+  },{
+    "nama": "Seksi Rehabilitasi Sosial Anak dan Lanjut Usia",
+    "unit": 31211
+  },{
+    "nama": "Seksi Rehabilitasi Sosial Penyandang Disabilitas",
+    "unit": 31212
+  },{
+    "nama": "Seksi Rehabilitasi Sosial Tuna Sosial dan Korban Perdagangan Orang",
+    "unit": 31213
+  },
+  {
+    "nama": "Bidang Pemberdayaan Sosial, Perlindungan dan Jaminan Sosial",
+    "unit": 313
+  },{
+    "nama": "Seksi Pemberdayaan Potensi dan Sumber Kesejahteraan Sosial",
+    "unit": 31311
+  },{
+    "nama": "Seksi Penanganan Fakir Miskin",
+    "unit": 31312
+  },{
+    "nama": "Seksi Perlindungan dan Jaminan Sosial",
+    "unit": 31313
+  },
+
+
   {
     "nama": "Dinas Luar",
     "unit": 99

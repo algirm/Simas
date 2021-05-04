@@ -563,6 +563,13 @@ class SuratOpdRepoImpl : SuratOpdRepo {
                     bawahan += asalDraftCharArray[j]
                 }
 
+                val caBawahan = bawahan.toCharArray()
+                if (caBawahan[0].toString() + caBawahan[1].toString() != "11" &&
+                    caBawahan.size == 4
+                ) {
+                    break
+                }
+
                 // update ke bawahan
                 val map = HashMap<String, Any?>()
                 map["status"] = DIKOREKSI
@@ -647,6 +654,13 @@ class SuratOpdRepoImpl : SuratOpdRepo {
                 for (j in 0 until asalDraft.size - i) {
                     bawahan += asalDraft[j].toString()
                 }
+                val caBawahan = bawahan.toCharArray()
+                if (caBawahan[0].toString() + caBawahan[1].toString() != "11" &&
+                    caBawahan.size == 4
+                ) {
+                    break
+                }
+
                 val map = HashMap<String, Any?>()
                 map["status"] = DISETUJUI_DINAS
                 map["keterangan"] = draftSurat.keterangan

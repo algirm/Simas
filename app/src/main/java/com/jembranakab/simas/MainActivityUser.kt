@@ -365,7 +365,38 @@ class MainActivityUser : BaseActivity(), ConfirmDialogListener {
 
     private fun setDrawerHeader() {
         val headerView = nav_view_user.getHeaderView(0)
-        headerView.namaOrg.text = thisOrg
+        val splitThisOrg = thisOrg?.split(" ")
+        val caThisUnit = thisUnit?.toString()?.toCharArray()
+        var opdThisUnit: String? = null
+        caThisUnit?.let {
+            opdThisUnit = it[0].toString()
+            if (it.size > 1) {
+                opdThisUnit += it[1].toString()
+            }
+        }
+        var textAtas = headerView.jembranakab_tv.text.toString()
+        var textBawah = thisOrg
+        when(thisUnit) {
+            1, 2, 11 -> {
+//                textAtas = headerView.jembranakab_tv.text.toString()
+                textBawah = thisOrg.toString()
+            }
+            else -> {
+//                opdThisUnit?.let {
+//                    textAtas = DataConverter.getNamaOrgFromAll(it.toInt())
+//                }
+                splitThisOrg?.let {
+                    textBawah = when {
+                        splitThisOrg[0] == "Sekretaris" || splitThisOrg[0] == "Asisten" -> {
+                            thisOrg.toString()
+                        }
+                        else -> "Kepala $thisOrg"
+                    }
+                }
+            }
+        }
+        headerView.jembranakab_tv.text = textAtas
+        headerView.namaOrg.text = textBawah
     }
 
     private fun init() {
